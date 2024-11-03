@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- nhúng icon từ bên ngoài -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./asset/MediaSanPham.css" />
+    <link rel="stylesheet" href="./asset/SanPham.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="body-header">
+          <div class="main-content">
+            <div class="logo">
+              <img src="./asset/img/logo.jpg" alt="" />
+            </div>
+
+            <div class="catogory catogory-product">
+              <i class="fa-solid fa-table-list"></i>
+              <span class="text-catogory">Sản phẩm</span>
+
+              <div class="hover-branch-list">
+                <div class="buffer"></div>
+                <ul style="color: black">
+                  <li>Branch 1</li>
+                  <li>Branch 2</li>
+                  <li>Branch 3</li>
+                  <li>Branch 4</li>
+                  <li>Branch 5</li>
+                  <li>Branch 6</li>
+                  <li>Branch 7</li>
+                  <li>Branch 8</li>
+                  <li>Branch 9</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="search-box">
+              <input
+                type="text"
+                name="search-box"
+                id="search-box"
+                placeholder="Bạn muốn tìm gì ?"
+                size="38"
+              />
+            </div>
+
+            <div class="catogory catogory-history">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span class="text-catogory">Lịch sử mua hàng</span>
+            </div>
+
+            <div class="catogory catogory-cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="text-catogory">Giỏ hàng</span>
+            </div>
+
+            <div class="catogory catogory-user">
+              <i class="fa-solid fa-user"></i>
+              <span class="text-catogory">User</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="body-main">
+        <div class="main-content">
+          <!-- bộ lọc -->
+          <div class="filter">
+            <!-- lọc tổng hợp -->
+            <div class="filter-box filter-synthetic">
+              <i class="fa-solid fa-filter"></i>
+              <span class="text-filter">Lọc</span>
+            </div>
+            <!-- khoảng giá -->
+            <div class="filter-box filter-about">
+              <i class="fa-solid fa-coins"></i>
+              <span class="text-filter">Khoảng giá</span>
+            </div>
+            <!-- giá giảm -->
+            <div class="filter-box filter-hTol">
+              <i class="fa-solid fa-arrow-down-wide-short"></i>
+              <span class="text-filter">Giá giảm dần</span>
+            </div>
+            <!-- giá tăng -->
+            <div class="filter-box filter-lToh">
+              <i class="fa-solid fa-arrow-up-wide-short"></i>
+              <span class="text-filter">Giá tăng dần</span>
+            </div>
+            <!-- các tiêu chí lọc phụ: không thể tương tác -->
+            <div class="filter-box">
+              <span class="text-filter">Kiểu màn hình</span>
+            </div>
+            <div class="filter-box">
+              <span class="text-filter">Dung lượng</span>
+            </div>
+          </div>
+          <!-- trưng bày sản phẩm -->
+          <div class="product-display">
+            <!-- danh sách sản phẩm -->
+            <div class="list-product">
+              <!-- item 1 -->
+              <div class="item item-1">
+                <div class="img-item">
+                  <img src="./asset/img/samsung1.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 2 -->
+              <div class="item item-2">
+                <div class="img-item">
+                  <img src="./asset/img/samsung2.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 3 -->
+              <div class="item item-3">
+                <div class="img-item">
+                  <img src="./asset/img/samsung3.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 4 -->
+              <div class="item item-4">
+                <div class="img-item">
+                  <img src="./asset/img/iphone1.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 5 -->
+              <div class="item item-5">
+                <div class="img-item">
+                  <img src="./asset/img/iphone2.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 6 -->
+              <div class="item item-6">
+                <div class="img-item">
+                  <img src="./asset/img/iphone3.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 7 -->
+              <div class="item item-7">
+                <div class="img-item">
+                  <img src="./asset/img/iphone4.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 8 -->
+              <div class="item item-8">
+                <div class="img-item">
+                  <img src="./asset/img/oppo1.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 9 -->
+              <div class="item item-9">
+                <div class="img-item">
+                  <img src="./asset/img/oppo2.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 10 -->
+              <div class="item item-10">
+                <div class="img-item">
+                  <img src="./asset/img/oppo3.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 11 -->
+              <div class="item item-11">
+                <div class="img-item">
+                  <img src="./asset/img/realme1.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 12 -->
+              <div class="item item-12">
+                <div class="img-item">
+                  <img src="./asset/img/realme2.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 13 -->
+              <div class="item item-13">
+                <div class="img-item">
+                  <img src="./asset/img/realme3.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 14 -->
+              <div class="item item-14">
+                <div class="img-item">
+                  <img src="./asset/img/redmi1.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 15 -->
+              <div class="item item-15">
+                <div class="img-item">
+                  <img src="./asset/img/redmi2.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- item 16 -->
+              <div class="item item-16">
+                <div class="img-item">
+                  <img src="./asset/img/redmi3.webp" alt="" />
+                </div>
+                <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+                <div class="info">
+                  <span>6.9 inches</span>
+                  <span>256 GB</span>
+                </div>
+                <div class="price">34.990.000đ</div>
+                <div class="promotion">
+                  Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn
+                  3-6 tháng
+                </div>
+                <div class="box-rating">
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="favorite">
+                    <span>Yêu thích</span>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- thanh chuyển trang -->
+            <div class="container-page-bar">
+              <div class="page-bar">
+                <i class="fa-solid fa-caret-left"></i>
+                <div class="page page-num-1">1</div>
+                <div class="page page-num-2">2</div>
+                <div class="page page-num-3">3</div>
+                <i class="fa-solid fa-caret-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="body-footer">
+        <div class="main-content">
+          <div class="address-shop">
+            <div class="address">
+              <img src="./asset/img/map.png" alt="Địa chỉ cửa hàng" />
+            </div>
+            <div class="info-shop">
+              <div class="connect location">
+                <div class="head">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <h4>Địa chỉ</h4>
+                </div>
+                <p>273 An Dương Vương, P.03, Q.05, TP Hồ Chí Minh</p>
+              </div>
+              <div class="connect phone">
+                <div class="head">
+                  <i class="fa-solid fa-phone"></i>
+                  <h4>Hotline</h4>
+                </div>
+                <p>090.123.4567 (8:00 - 22:00)</p>
+              </div>
+              <div class="connect email">
+                <div class="head">
+                  <i class="fa-solid fa-envelope"></i>
+                  <h4>Email</h4>
+                </div>
+                <p>group55@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="return-head">
+          <a href="#"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+        <div class="policy-shop">
+          <div class="info">
+            <h4>Thông tin cửa hàng</h4>
+            <p>Cửa hàng GROUP 55</p>
+            <p>273 An Dương Vương P3 Q5 TPHCM</p>
+            Hotline: 090.123.4567
+          </div>
+          <div class="policy">
+            <h4>Chính sách</h4>
+            <p>Quy chế hoạt động</p>
+            <p>Chính sách bảo hành</p>
+            <p>Liên hệ hợp tác kinh doanh</p>
+            <p>Đơn doanh nghiệp</p>
+          </div>
+          <div class="guarantee">
+            <h4>Bảo hành</h4>
+            <p>Tra thông tin bảo hành</p>
+            <p>Trung tâm bảo hành chính hãng</p>
+            <p>Quy định về việc sao lưu dữ liệu</p>
+            <p>Dịch vụ bảo hành điện thoại</p>
+          </div>
+          <div class="hotline">
+            <h4>Hotline</h4>
+            <p>Gọi mua hàng: 123455667890</p>
+            <p>Gọi khiếu nại: 1122334455</p>
+            <p>Gọi bảo hành: 0987654321</p>
+            <p>(8:00 - 22:00)</p>
+          </div>
+        </div>
+        <div class="source">2024 | Copyright by <span>GROUP 55</span></div>
+      </div>
+    </footer>
+  </body>
+</html>
