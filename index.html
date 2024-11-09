@@ -32,17 +32,21 @@
                 <div class="buffer"></div>
                 <ul style="color: black">
                   <a
-                    href="#"
+                    href="SanPham.html"
                     class="brand-link"
                     id="iphone"
                     onclick="displayProductByBrand(this)"
+                    return
+                    false
                     ><li>iPhone</li></a
                   >
                   <a
-                    href="#"
+                    href="SanPham.html"
                     class="brand-link"
                     id="samsung"
                     onclick="displayProductByBrand(this)"
+                    return
+                    false
                     ><li>Samsung</li></a
                   >
 
@@ -51,10 +55,12 @@
                   <a href="#" class="brand-link" id="redmi"><li>Redmi</li></a>
 
                   <a
-                    href="#"
+                    href="SanPham.html"
                     class="brand-link"
                     id="xiaomi"
                     onclick="displayProductByBrand(this)"
+                    return
+                    false
                     ><li>Xiaomi</li></a
                   >
 
@@ -99,50 +105,6 @@
         </div>
       </div>
     </header>
-
-    <main>
-      <div class="body-main">
-        <div class="main-content">
-          <!-- bộ lọc -->
-          <div class="filter">
-            <!-- lọc tổng hợp -->
-            <div class="filter-box filter-synthetic">
-              <i class="fa-solid fa-filter"></i>
-              <span class="text-filter">Lọc</span>
-            </div>
-            <!-- khoảng giá -->
-            <div class="filter-box filter-about">
-              <i class="fa-solid fa-coins"></i>
-              <span class="text-filter">Khoảng giá</span>
-            </div>
-            <!-- giá giảm -->
-            <div class="filter-box filter-hTol">
-              <i class="fa-solid fa-arrow-down-wide-short"></i>
-              <span class="text-filter">Giá giảm dần</span>
-            </div>
-            <!-- giá tăng -->
-            <div class="filter-box filter-lToh">
-              <i class="fa-solid fa-arrow-up-wide-short"></i>
-              <span class="text-filter">Giá tăng dần</span>
-            </div>
-            <!-- các tiêu chí lọc phụ: không thể tương tác -->
-            <div class="filter-box">
-              <span class="text-filter">Kiểu màn hình</span>
-            </div>
-            <div class="filter-box">
-              <span class="text-filter">Dung lượng</span>
-            </div>
-          </div>
-          <!-- trưng bày sản phẩm -->
-          <div class="product-display">
-            <!-- danh sách sản phẩm -->
-            <div id="productList" class="list-product"></div>
-            <!-- thanh chuyển trang -->
-            <div class="pagination" id="pagination"></div>
-          </div>
-        </div>
-      </div>
-    </main>
 
     <footer>
       <div class="body-footer">
@@ -212,6 +174,6 @@
       </div>
     </footer>
 
-    <script src="./SanPham.js"></script>
+    <script src="./SanPham2.js"></script>
   </body>
 </html>
