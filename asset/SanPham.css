@@ -260,40 +260,11 @@ a {
   color: red;
 }
 
-/* .body-main .product-display .container-page-bar {
-  width: 100%;
-  height: 50px;
-  margin-top: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.product-display .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: 10px;
-}
-
-.product-display .pagination .page {
-  background: rgba(217, 217, 217, 1);
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.product-display .pagination .active {
-  width: 25px;
-  height: 25px;
-  background: rgb(194, 194, 194);
-} */
-
 /* ====================================== CHI TIẾT SẢN PHẨM ====================  */
+
+.product-detail {
+  margin-top: 20px;
+}
 
 .product-detail .box-detail {
   display: flex;
@@ -360,14 +331,13 @@ a {
 
 .product-detail .box-detail .info-detail {
   width: 35%;
-  /* border: 1px solid pink; */
 }
 
 .product-detail .box-detail .info-detail h3 {
   font-size: 40px;
   font-weight: 800;
   width: 100%;
-  height: 60px;
+  margin-bottom: 10px;
 }
 
 .product-detail .box-detail .info-detail .price {
@@ -402,8 +372,20 @@ a {
 }
 
 .product-detail .specifications {
+  display: flex;
+  gap: 10px;
   /* border: 1px solid red; */
   margin: 30px 0px;
+  /* width: 30%; */
+}
+
+.product-detail .specifications div {
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  padding: 5px;
+  width: 33.33%;
+  background-color: #f8f8f8;
+  box-shadow: 0px 4px 5px #cecece;
 }
 
 .product-detail .specifications h4 {

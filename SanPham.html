@@ -116,12 +116,20 @@
               <span class="text-filter">Khoảng giá</span>
             </div>
             <!-- giá giảm -->
-            <div class="filter-box filter-hTol">
+            <div
+              class="filter-box filter-hTol"
+              id="dec"
+              onclick="displayByPrice(this)"
+            >
               <i class="fa-solid fa-arrow-down-wide-short"></i>
               <span class="text-filter">Giá giảm dần</span>
             </div>
             <!-- giá tăng -->
-            <div class="filter-box filter-lToh">
+            <div
+              class="filter-box filter-lToh"
+              id="inc"
+              onclick="displayByPrice(this)"
+            >
               <i class="fa-solid fa-arrow-up-wide-short"></i>
               <span class="text-filter">Giá tăng dần</span>
             </div>
@@ -212,6 +220,6 @@
       </div>
     </footer>
 
-    <script src="./SanPham.js"></script>
+    <script src="./SanPham2.js"></script>
   </body>
 </html>
