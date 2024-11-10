@@ -114,6 +114,21 @@
             <div class="filter-box filter-about">
               <i class="fa-solid fa-coins"></i>
               <span class="text-filter">Khoảng giá</span>
+              <form onsubmit="filterAboutPrice()">
+                <div class="slider-container">
+                  <input
+                    type="range"
+                    id="rangeSlider"
+                    min="2000000"
+                    max="100000000"
+                    value="5000000"
+                    step="200000"
+                    oninput="updateSliderValue()"
+                  />
+                  <span id="sliderValue">5000000</span>
+                  <input type="submit" value="Áp dụng" />
+                </div>
+              </form>
             </div>
             <!-- giá giảm -->
             <div

@@ -484,3 +484,53 @@ a {
 .body-footer .return-head:hover {
   opacity: 1;
 }
+
+/*=========================== range price ======================= */
+
+.filter .filter-about {
+  position: relative;
+}
+
+.filter .filter-about:hover .slider-container {
+  display: flex;
+}
+
+.slider-container {
+  padding: 5px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  width: 150%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  left: 0px;
+  display: none;
+  /* display: flex; */
+}
+
+#rangeSlider {
+  width: 100%;
+}
+
+#sliderValue {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  opacity: 0.8; /* Đặt độ mờ mặc định cho giá trị */
+  transition: opacity 0.2s ease;
+}
+
+.filter .filter-about .slider-container input[type="submit"] {
+  margin-left: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(255, 110, 110);
+  color: #fff;
+}
+
+.filter .filter-about .slider-container input[type="submit"]:hover {
+  background-color: rgb(253, 90, 90);
+}

@@ -197,3 +197,65 @@ function displayMainImage(src) {
   if (document.getElementById("displayMainImg").src !== src)
     document.getElementById("displayMainImg").src = src; // Thay đổi src của hình ảnh lớn
 }
+
+const rangeSlider = document.getElementById("rangeSlider");
+const sliderValue = document.getElementById("sliderValue");
+
+rangeSlider.addEventListener("input", function () {
+  const value = rangeSlider.value;
+  sliderValue.textContent = value;
+
+  // Tính toán vị trí của giá trị theo dấu chấm kéo
+  const sliderWidth = rangeSlider.offsetWidth;
+  const thumbWidth = 16; // Kích thước dấu chấm kéo
+  const max = rangeSlider.max;
+  const min = rangeSlider.min;
+
+  const percent = (value - min) / (max - min);
+  const offset = percent * (sliderWidth - thumbWidth);
+
+  sliderValue.style.left = `${offset}px`;
+});
+
+// Hiển thị giá trị khi người dùng nhấn vào thanh trượt
+rangeSlider.addEventListener("mousedown", function () {
+  sliderValue.style.opacity = "0.8";
+});
+
+// Ẩn giá trị khi người dùng thả chuột
+rangeSlider.addEventListener("mouseup", function () {
+  sliderValue.style.opacity = "0";
+});
+
+// Xử lý ẩn giá trị khi người dùng rời chuột ngoài thanh trượt
+rangeSlider.addEventListener("mouseleave", function () {
+  sliderValue.style.opacity = "0";
+});
+
+const minPrice = 2000000;
+
+function filterAboutPrice() {
+  let maxPrice = Number(document.getElementById("rangeSlider").value); // Lấy giá trị từ slider
+  let lstAboutPrice = [];
+
+  for (let i = 0; i < probybrand.length; i++) {
+    if (
+      Number(probybrand[i].price) >= minPrice &&
+      Number(probybrand[i].price) <= maxPrice
+    ) {
+      lstAboutPrice.push(probybrand[i]);
+    }
+  }
+
+  if (lstAboutPrice.length <= 0) {
+    alert("Danh sách rỗng");
+  } else {
+    display(lstAboutPrice); // Gọi hàm hiển thị
+  }
+}
+
+function updateSliderValue() {
+  const slider = document.getElementById("rangeSlider");
+  const sliderValue = document.getElementById("sliderValue");
+  sliderValue.textContent = slider.value; // Cập nhật giá trị hiển thị
+}
