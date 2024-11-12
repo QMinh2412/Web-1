@@ -125,7 +125,7 @@
                     step="200000"
                     oninput="updateSliderValue()"
                   />
-                  <span id="sliderValue">5000000</span>
+                  <span id="sliderValue"></span>
                   <input type="submit" value="Áp dụng" />
                 </div>
               </form>
@@ -134,7 +134,7 @@
             <div
               class="filter-box filter-hTol"
               id="dec"
-              onclick="displayByPrice(this)"
+              onclick="sortProductsByPrice(this)"
             >
               <i class="fa-solid fa-arrow-down-wide-short"></i>
               <span class="text-filter">Giá giảm dần</span>
@@ -143,7 +143,7 @@
             <div
               class="filter-box filter-lToh"
               id="inc"
-              onclick="displayByPrice(this)"
+              onclick="sortProductsByPrice(this)"
             >
               <i class="fa-solid fa-arrow-up-wide-short"></i>
               <span class="text-filter">Giá tăng dần</span>

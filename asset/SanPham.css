@@ -4,6 +4,9 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+html {
+  scroll-behavior: smooth; /* Thêm hiệu ứng cuộn mượt mà */
+}
 
 /* ================================ RESET THUỘC TÍNH ====================================== */
 body {
@@ -179,11 +182,13 @@ a {
 }
 
 .body-main .product-display .list-product {
-  width: 100%;
+  width: 80%;
   background-color: #f3f3f3;
-  padding: 2px;
+  padding: 3px;
+  margin: 0 auto;
+  border-radius: 10px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 5px;
 }
 
@@ -201,8 +206,8 @@ a {
 }
 
 .product-display .list-product .product-card img {
-  width: 280px;
-  height: 280px;
+  width: 250px;
+  height: 350px;
   padding: 5px;
   margin: 0 auto;
 }
@@ -403,6 +408,42 @@ a {
 
 .product-detail .specifications p span {
   color: #444444;
+}
+
+/* ====================================== PHÂN TRANG =========================== */
+
+.product-display .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.product-display .pagination .btn-page {
+  width: 30px;
+  height: 30px;
+  /* color: rgb(237, 67, 67); */
+  margin-right: 10px;
+  border: 1px solid rgb(237, 67, 67);
+  border-radius: 10px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-display .pagination .btn-page:hover {
+  background-color: rgb(237, 67, 67);
+  color: #fff;
+  border: none;
+}
+
+.product-display .pagination .btn-page.active {
+  background-color: rgb(237, 67, 67);
+  color: #fff;
+  width: 28px;
+  height: 28px;
 }
 
 /* ====================================== FOOTER =============================== */
