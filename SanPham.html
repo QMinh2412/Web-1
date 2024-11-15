@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="./asset/MediaSanPham.css" />
     <link rel="stylesheet" href="./asset/SanPham.css" />
-    <title>Document</title>
+    <title>sản phẩm</title>
   </head>
   <body>
     <header>
@@ -32,17 +32,15 @@
                 <div class="buffer"></div>
                 <ul style="color: black">
                   <a
-                    href="#"
+                    href="SanPham.html?brand=iphone&page=1"
                     class="brand-link"
                     id="iphone"
-                    onclick="displayProductByBrand(this)"
                     ><li>iPhone</li></a
                   >
                   <a
-                    href="#"
+                    href="SanPham.html?brand=samsung&page=1"
                     class="brand-link"
                     id="samsung"
-                    onclick="displayProductByBrand(this)"
                     ><li>Samsung</li></a
                   >
 
@@ -51,10 +49,9 @@
                   <a href="#" class="brand-link" id="redmi"><li>Redmi</li></a>
 
                   <a
-                    href="#"
+                    href="SanPham.html?brand=xiaomi&page=1"
                     class="brand-link"
                     id="xiaomi"
-                    onclick="displayProductByBrand(this)"
                     ><li>Xiaomi</li></a
                   >
 
@@ -71,15 +68,18 @@
               </div>
             </div>
 
-            <div class="search-box">
-              <input
-                type="text"
-                name="search-box"
-                id="search-box"
-                placeholder="Bạn muốn tìm gì ?"
-                size="38"
-              />
-            </div>
+            <form onsubmit="searchProduct()">
+              <div class="search-box">
+                <input
+                  type="text"
+                  name="search-box"
+                  id="search-box"
+                  placeholder="Bạn muốn tìm gì ?"
+                  size="38"
+                />
+                <input type="submit" value="" />
+              </div>
+            </form>
 
             <div class="catogory catogory-history">
               <i class="fa-solid fa-clock-rotate-left"></i>
@@ -123,7 +123,7 @@
                     max="100000000"
                     value="5000000"
                     step="200000"
-                    oninput="updateSliderValue()"
+                    oninput="updateSliderValue(event)"
                   />
                   <span id="sliderValue"></span>
                   <input type="submit" value="Áp dụng" />
@@ -235,6 +235,6 @@
       </div>
     </footer>
 
-    <script src="./SanPham2.js"></script>
+    <script src="./SanPham.js"></script>
   </body>
 </html>
