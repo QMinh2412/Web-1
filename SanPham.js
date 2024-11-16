@@ -904,6 +904,55 @@ function displayListByBrand(brand) {
 displayListByBrand(brandProduct);
 console.log(productsByBrand);
 
+// ======================== HÀM HIỆN THỊ BỘ LỌC ===========================================
+function showFilter() {
+  document.getElementsByClassName("filter")[0].innerHTML = `
+    <div class="filter-box filter-synthetic">
+              <i class="fa-solid fa-filter"></i>
+              <span class="text-filter">Lọc</span>
+            </div>
+            
+            <div class="filter-box filter-about">
+              <i class="fa-solid fa-coins"></i>
+              <span class="text-filter">Khoảng giá</span>
+              <form onsubmit="filterAboutPrice(event)">
+                <div class="slider-container">
+                  <input
+                    type="range"
+                    id="rangeSlider"
+                    min="2000000"
+                    max="100000000"
+                    value="5000000"
+                    step="200000"
+                    oninput="updateSliderValue(event)"
+                  />
+                  <span id="sliderValue"></span>
+                  <input type="submit" value="Áp dụng" />
+                </div>
+              </form>
+            </div>
+            
+            <div
+              class="filter-box filter-hTol"
+              id="dec"
+              onclick="sortProductsByPrice(this)"
+            >
+              <i class="fa-solid fa-arrow-down-wide-short"></i>
+              <span class="text-filter">Giá giảm dần</span>
+            </div>
+            
+            <div
+              class="filter-box filter-lToh"
+              id="inc"
+              onclick="sortProductsByPrice(this)"
+            >
+              <i class="fa-solid fa-arrow-up-wide-short"></i>
+              <span class="text-filter">Giá tăng dần</span>
+            </div>
+  `;
+}
+showFilter();
+
 // ======================== HÀM HIỆN THỊ CÁC SẢN PHẨM TRÊN TRANG ==========================
 function displayProductPerPage(page) {
   window.scrollTo(0, 0); // Cuộn lên đầu trang

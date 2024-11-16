@@ -181,6 +181,15 @@ a {
   background: rgba(221, 221, 221, 1);
 }
 
+.body-main .filter .filter-box:hover {
+  background-color: rgb(199, 199, 199);
+  color: rgb(255, 56, 56);
+}
+
+.body-main .filter .filter-box:active {
+  background-color: rgb(187, 186, 186);
+}
+
 .body-main .product-display {
   width: 100%;
   /* border: 1px solid red; */
@@ -554,7 +563,7 @@ a {
   top: 100%;
   left: 0px;
   display: none;
-  /* display: flex; */
+  color: black;
 }
 
 #rangeSlider {
