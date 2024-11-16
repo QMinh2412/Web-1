@@ -885,10 +885,6 @@ const urlParams = new URLSearchParams(window.location.search);
 const brandProduct = urlParams.get("brand");
 const beginPage = urlParams.get("page");
 
-// console.log("URL search params:", window.location.search);
-// console.log("Brand of product: ", brandProduct);
-// console.log("Begin page: ", beginPage);
-
 function displayListByBrand(brand) {
   productsByBrand = [];
   for (let element of listProducts) {
@@ -897,12 +893,14 @@ function displayListByBrand(brand) {
     }
   }
 
+  if (!brand) productsByBrand = listProducts;
+
   currentPage = 1;
   displayProductPerPage(currentPage);
 }
 
 displayListByBrand(brandProduct);
-console.log(productsByBrand);
+// console.log(productsByBrand);
 
 // ======================== HÀM HIỆN THỊ BỘ LỌC ===========================================
 function showFilter() {

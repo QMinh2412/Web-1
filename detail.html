@@ -44,9 +44,19 @@
                     ><li>Samsung</li></a
                   >
 
-                  <a href="#" class="brand-link" id="oppo"><li>Oppo</li></a>
+                  <a
+                    href="SanPham.html?brand=oppo&page=1"
+                    class="brand-link"
+                    id="oppo"
+                    ><li>Oppo</li></a
+                  >
 
-                  <a href="#" class="brand-link" id="redmi"><li>Redmi</li></a>
+                  <a
+                    href="SanPham.html?brand=redmi&page=1"
+                    class="brand-link"
+                    id="redmi"
+                    ><li>Redmi</li></a
+                  >
 
                   <a
                     href="SanPham.html?brand=xiaomi&page=1"
@@ -55,28 +65,50 @@
                     ><li>Xiaomi</li></a
                   >
 
-                  <a href="#" class="brand-link" id="vivo"><li>Vivo</li></a>
+                  <a
+                    href="SanPham.html?brand=vivo&page=1"
+                    class="brand-link"
+                    id="vivo"
+                    ><li>Vivo</li></a
+                  >
 
-                  <a href="#" class="brand-link" id="huawei"><li>Huawei</li></a>
+                  <a
+                    href="SanPham.html?brand=huawei&page=1"
+                    class="brand-link"
+                    id="huawei"
+                    ><li>Huawei</li></a
+                  >
 
-                  <a href="#" class="brand-link" id="nokia"><li>Nokia</li></a>
+                  <a
+                    href="SanPham.html?brand=nokia&page=1"
+                    class="brand-link"
+                    id="nokia"
+                    ><li>Nokia</li></a
+                  >
 
-                  <a href="#" class="brand-link" id="TECH NO"
+                  <a
+                    href="SanPham.html?brand=techno&page=1"
+                    class="brand-link"
+                    id="TECH NO"
                     ><li>TECH NO</li></a
                   >
                 </ul>
               </div>
             </div>
 
-            <div class="search-box">
-              <input
-                type="text"
-                name="search-box"
-                id="search-box"
-                placeholder="Bạn muốn tìm gì ?"
-                size="38"
-              />
-            </div>
+            <form onsubmit="searchProduct(event)">
+              <div class="search-box">
+                <input
+                  type="text"
+                  name="search-box"
+                  id="search-box"
+                  placeholder="Bạn muốn tìm gì ?"
+                  size="38"
+                  autocomplete="off"
+                />
+                <input type="submit" value="Tìm kiếm" />
+              </div>
+            </form>
 
             <div class="catogory catogory-history">
               <i class="fa-solid fa-clock-rotate-left"></i>
