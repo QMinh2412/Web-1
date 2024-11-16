@@ -869,9 +869,13 @@ if (listProducts.length <= 0) {
   // đẩy mảng lên local storage
   localStorage.setItem("data", JSON.stringify(listProducts));
 }
+
+// lấy dữ liệu tù local storage
+listProducts = JSON.parse(localStorage.getItem("data"));
+
 // ======================== KHAI BÁO BIẾN ==============================
 let productsByBrand = [];
-let productPerPage = 6;
+let productPerPage = 10;
 let currentPage = 1; // Trang hiện tại
 let currentProductList = []; // Danh sách sản phẩm hiển thị trên trang
 let sort;
@@ -881,9 +885,9 @@ const urlParams = new URLSearchParams(window.location.search);
 const brandProduct = urlParams.get("brand");
 const beginPage = urlParams.get("page");
 
-console.log("URL search params:", window.location.search);
-console.log("Brand of product: ", brandProduct);
-console.log("Begin page: ", beginPage);
+// console.log("URL search params:", window.location.search);
+// console.log("Brand of product: ", brandProduct);
+// console.log("Begin page: ", beginPage);
 
 function displayListByBrand(brand) {
   productsByBrand = [];
@@ -909,8 +913,8 @@ function displayProductPerPage(page) {
   const endIndex = startIndex + productPerPage;
   const cutArr = productsByBrand.slice(startIndex, endIndex); // Lấy phần tử cho trang hiện tại
 
-  console.log(cutArr.length);
-  console.log(cutArr);
+  // console.log(cutArr.length);
+  // console.log(cutArr);
 
   display(cutArr); // Hiển thị danh sách sản phẩm cắt từ currentProductList
   productPagination(); // Cập nhật phân trang dựa trên currentProductList
@@ -1012,23 +1016,23 @@ function filterAboutPrice(event) {
 
   const maxPrice = Number(document.getElementById("rangeSlider").value);
   const minPrice = 2000000; // Thay đổi tùy theo yêu cầu khoảng giá thấp nhất
-  console.log("min price: ", minPrice);
-  console.log("max price", maxPrice);
+  console.log("min: ", minPrice);
+  console.log("max: ", maxPrice);
 
-  currentProductList = [];
-  for (let element of productsByBrand) {
-    if (element.price >= minPrice && element.price <= maxPrice) {
-      currentProductList.push(element);
-    }
-  }
+  const filteredProducts = productsByBrand.filter(
+    (element) => element.price >= minPrice && element.price <= maxPrice
+  );
+  console.log("filtered: ", filteredProducts);
+  console.log("products by brand: ", productsByBrand);
 
-  console.log("Filtered Products:", currentProductList);
-
-  if (currentProductList.length === 0) {
-    alert("Danh sách rỗng");
+  if (filteredProducts.length === 0) {
+    alert("Không có sản phẩm nào trong khoảng giá này.");
   } else {
+    productsByBrand = filteredProducts;
+    console.log("products by brand: ", productsByBrand);
     currentPage = 1; // Đặt lại trang hiện tại về 1
     displayProductPerPage(currentPage); // Hiển thị sản phẩm đã lọc theo trang đầu
+    productPagination(); // Cập nhật phân trang dựa trên productsByBrand
   }
 }
 
@@ -1039,18 +1043,30 @@ function updateSliderValue() {
 }
 
 // =========================== HÀM TÌM KIẾM THEO TÊN SẢN PHẨM =============================
-function searchProduct() {
+function searchProduct(event) {
+  event.preventDefault();
   let nameFind = document.getElementById("search-box").value;
 
   productsByBrand = [];
   for (let element of listProducts) {
-    if (element.name.includes(nameFind)) {
+    if (element.name.toLowerCase().includes(nameFind.toLowerCase())) {
       productsByBrand.push(element);
     }
   }
 
-  currentPage = 1;
-  displayProductPerPage(currentPage);
+  if (productsByBrand.length === 0) {
+    document.getElementsByClassName("product-display")[0].innerHTML = `
+      <div style="color: red; font-size: 20px; font-weight: 600; font-style: italic; text-align: center">
+        Danh sách trống
+      </div> `;
+  } else {
+    currentPage = 1;
+    displayProductPerPage(currentPage);
+  }
+
+  // Cập nhật URL với nội dung tìm kiếm
+  const newUrl = `SanPham.html?find=${encodeURIComponent(nameFind)}`;
+  history.pushState(null, "", newUrl); // Thay đổi URL mà không làm mới trang
 }
 
 // =========================== HÀM HỘ TRỠ =============================
@@ -1068,17 +1084,6 @@ function createRatingStars(rating) {
     }"></i>`;
   }
   return stars;
-}
-
-// Hàm thay đổi url
-function changeUrl(brand, page, sort, min, max, find){
-  // // Cập nhật URL với số trang
-  // const brand = new URLSearchParams(window.location.search).get("brand");
-  // const newUrl = `SanPham.html?brand=${brand}&page=${page}`;
-  // history.pushState(null, "", newUrl); // Thay đổi URL mà không làm mới trang
-
-  const urlParams = new URLSearchParams(Window.location.search);
-  
 }
 
 // xử lý input range

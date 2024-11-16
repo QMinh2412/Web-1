@@ -68,7 +68,7 @@
               </div>
             </div>
 
-            <form onsubmit="searchProduct()">
+            <form onsubmit="searchProduct(event)">
               <div class="search-box">
                 <input
                   type="text"
@@ -76,8 +76,9 @@
                   id="search-box"
                   placeholder="Bạn muốn tìm gì ?"
                   size="38"
+                  autocomplete="off"
                 />
-                <input type="submit" value="" />
+                <input type="submit" value="Tìm kiếm" />
               </div>
             </form>
 
@@ -114,7 +115,7 @@
             <div class="filter-box filter-about">
               <i class="fa-solid fa-coins"></i>
               <span class="text-filter">Khoảng giá</span>
-              <form onsubmit="filterAboutPrice()">
+              <form onsubmit="filterAboutPrice(event)">
                 <div class="slider-container">
                   <input
                     type="range"

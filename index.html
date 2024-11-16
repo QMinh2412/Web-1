@@ -67,15 +67,19 @@
               </div>
             </div>
 
-            <div class="search-box">
-              <input
-                type="text"
-                name="search-box"
-                id="search-box"
-                placeholder="Bạn muốn tìm gì ?"
-                size="38"
-              />
-            </div>
+            <form onsubmit="searchProduct(event)">
+              <div class="search-box">
+                <input
+                  type="text"
+                  name="search-box"
+                  id="search-box"
+                  placeholder="Bạn muốn tìm gì ?"
+                  size="38"
+                  autocomplete="off"
+                />
+                <input type="submit" value="Tìm kiếm" />
+              </div>
+            </form>
 
             <div class="catogory catogory-history">
               <i class="fa-solid fa-clock-rotate-left"></i>

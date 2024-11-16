@@ -109,6 +109,13 @@ a {
   border: none;
 }
 
+.header .search-box input[type="submit"] {
+  background: rgba(212, 102, 102, 1);
+  height: 100%;
+  border-radius: 0px 10px 10px 0px;
+  color: #fff;
+}
+
 .header .catogory .text-catogory {
   font-size: 16px;
   /* font-weight: 600; */
@@ -121,10 +128,10 @@ a {
 
 .header .search-box {
   background: rgba(255, 255, 255, 1);
-  width: 300px;
+  /* width: 300px; */
   height: 35px;
   border-radius: 10px;
-  padding: 5px;
+  padding-left: 5px;
   display: flex;
   align-items: center;
 }
@@ -182,13 +189,13 @@ a {
 }
 
 .body-main .product-display .list-product {
-  width: 80%;
+  width: 100%;
   background-color: #f3f3f3;
   padding: 3px;
   margin: 0 auto;
   border-radius: 10px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 5px;
 }
 
@@ -207,7 +214,7 @@ a {
 
 .product-display .list-product .product-card img {
   width: 250px;
-  height: 350px;
+  height: 300px;
   padding: 5px;
   margin: 0 auto;
 }
