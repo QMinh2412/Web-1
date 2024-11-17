@@ -1061,12 +1061,14 @@ function sortProductsByPrice(obj) {
 function filterAboutPrice(event) {
   event.preventDefault(); // Ngăn chặn hành vi gửi form
 
+  let tempListByBrand = productsByBrand;
+
   const maxPrice = Number(document.getElementById("rangeSlider").value);
   const minPrice = 2000000; // Thay đổi tùy theo yêu cầu khoảng giá thấp nhất
   console.log("min: ", minPrice);
   console.log("max: ", maxPrice);
 
-  const filteredProducts = productsByBrand.filter(
+  const filteredProducts = tempListByBrand.filter(
     (element) => element.price >= minPrice && element.price <= maxPrice
   );
   console.log("filtered: ", filteredProducts);
@@ -1080,6 +1082,8 @@ function filterAboutPrice(event) {
     currentPage = 1; // Đặt lại trang hiện tại về 1
     displayProductPerPage(currentPage); // Hiển thị sản phẩm đã lọc theo trang đầu
     productPagination(); // Cập nhật phân trang dựa trên productsByBrand
+
+    productsByBrand = tempListByBrand;
   }
 }
 
