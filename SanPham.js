@@ -117,7 +117,7 @@ let listProducts = [
     bonhotrong: "256GB",
     pin: "3.265 mAh",
     os: "iOS 18",
-    price: 309800000,
+    price: 30800000,
     storage: "256GB",
     promotion: "Giảm 5% cho khách hàng mới",
     rating: 5,
@@ -142,7 +142,7 @@ let listProducts = [
     bonhotrong: "256GB",
     pin: "3.265 mAh",
     os: "iOS 18",
-    price: 309800000,
+    price: 20800000,
     storage: "256GB",
     promotion: "Giảm 5% cho khách hàng mới",
     rating: 5,
@@ -875,25 +875,41 @@ listProducts = JSON.parse(localStorage.getItem("data"));
 
 // ======================== KHAI BÁO BIẾN ==============================
 let productsByBrand = [];
+let originalProductsByBrand = []; // Mảng tạm lưu danh sách sản phẩm theo hãng ban đầu
 let productPerPage = 10;
 let currentPage = 1; // Trang hiện tại
-let currentProductList = []; // Danh sách sản phẩm hiển thị trên trang
-let sort;
 
 // ====================== HÀM IN SẢN PHẨM THEO HÃNG ===========================
 const urlParams = new URLSearchParams(window.location.search);
 const brandProduct = urlParams.get("brand");
 const beginPage = urlParams.get("page");
 
+console.log("brand: ", brandProduct);
+console.log("kiểu của brand: ", typeof brandProduct);
+
 function displayListByBrand(brand) {
   productsByBrand = [];
-  for (let element of listProducts) {
-    if (element.brandId === brandProduct) {
-      productsByBrand.push(element);
+
+  // Kiểm tra nếu brand là null
+  if (brand === "null") {
+    console.log("đang chạy trong brand === null");
+    productsByBrand = listProducts; // Nếu brand là null, lấy tất cả sản phẩm
+    originalProductsByBrand = productsByBrand; // Lưu vào mảng tạm
+  } else {
+    for (let element of listProducts) {
+      if (element.brandId === brand) {
+        productsByBrand.push(element);
+      }
     }
+    originalProductsByBrand = productsByBrand; // Lưu vào mảng tạm
   }
 
-  if (!brand) productsByBrand = listProducts;
+  console.log("danh sách theo hãng lúc này: ", productsByBrand);
+
+  if (productsByBrand.length === 0) {
+    alert("danh sach trong");
+    return;
+  }
 
   currentPage = 1;
   displayProductPerPage(currentPage);
@@ -960,11 +976,8 @@ function displayProductPerPage(page) {
   const endIndex = startIndex + productPerPage;
   const cutArr = productsByBrand.slice(startIndex, endIndex); // Lấy phần tử cho trang hiện tại
 
-  // console.log(cutArr.length);
-  // console.log(cutArr);
-
-  display(cutArr); // Hiển thị danh sách sản phẩm cắt từ currentProductList
-  productPagination(); // Cập nhật phân trang dựa trên currentProductList
+  display(cutArr); // Hiển thị danh sách sản phẩm cắt từ productsByBrand
+  productPagination(); // Cập nhật phân trang dựa trên productsByBrand
 
   // Cập nhật URL với số trang
   const brand = new URLSearchParams(window.location.search).get("brand");
@@ -982,7 +995,7 @@ window.addEventListener("popstate", function (event) {
   const page = parseInt(urlParams.get("page")) || 1; // Mặc định là trang 1
 
   // Gọi hàm để hiển thị sản phẩm theo brand và trang
-  displayListByBrand(brand, page);
+  displayListByBrand(brand);
 });
 
 // ===================== HÀM TẠO PHÂN TRANG ================================
@@ -1061,30 +1074,28 @@ function sortProductsByPrice(obj) {
 function filterAboutPrice(event) {
   event.preventDefault(); // Ngăn chặn hành vi gửi form
 
-  let tempListByBrand = productsByBrand;
-
   const maxPrice = Number(document.getElementById("rangeSlider").value);
   const minPrice = 2000000; // Thay đổi tùy theo yêu cầu khoảng giá thấp nhất
   console.log("min: ", minPrice);
   console.log("max: ", maxPrice);
 
-  const filteredProducts = tempListByBrand.filter(
+  // Lọc sản phẩm theo khoảng giá từ mảng tạm
+  const filteredProducts = originalProductsByBrand.filter(
     (element) => element.price >= minPrice && element.price <= maxPrice
   );
+
   console.log("filtered: ", filteredProducts);
-  console.log("products by brand: ", productsByBrand);
 
   if (filteredProducts.length === 0) {
     alert("Không có sản phẩm nào trong khoảng giá này.");
+    productsByBrand = []; // Nếu không có sản phẩm nào, gán danh sách sản phẩm là rỗng
   } else {
-    productsByBrand = filteredProducts;
-    console.log("products by brand: ", productsByBrand);
-    currentPage = 1; // Đặt lại trang hiện tại về 1
-    displayProductPerPage(currentPage); // Hiển thị sản phẩm đã lọc theo trang đầu
-    productPagination(); // Cập nhật phân trang dựa trên productsByBrand
-
-    productsByBrand = tempListByBrand;
+    productsByBrand = filteredProducts; // Cập nhật danh sách sản phẩm đã lọc
   }
+
+  currentPage = 1; // Đặt lại trang hiện tại về 1
+  displayProductPerPage(currentPage); // Hiển thị sản phẩm đã lọc theo trang đầu
+  productPagination(); // Cập nhật phân trang dựa trên productsByBrand
 }
 
 // hàm cập nhật giá trị slider cho khoảng giá
