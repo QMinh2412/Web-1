@@ -15,8 +15,8 @@ let listProducts = [
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
     ram: "8GB",
-    bonhotrong: "256GB",
-    pin: "3.265 mAh",
+    bonhotrong: "32GB",
+    pin: "3265 mAh",
     os: "iOS 18",
     price: 309800000,
     storage: "256GB",
@@ -35,13 +35,13 @@ let listProducts = [
       { thumnail: "asset/img/iphone4.webp", alt: "Ảnh 3" },
     ],
     desc: "Tùy chọn màu sắc mới của dòng điện thoại này ",
-    screen: "6.7 inchs",
+    screen: "6.8 inchs",
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
     ram: "8GB",
     bonhotrong: "256GB",
-    pin: "3.265 mAh",
+    pin: "3265 mAh",
     os: "iOS 18",
     price: 23990000,
     storage: "256GB",
@@ -65,7 +65,8 @@ let listProducts = [
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
     ram: "8GB",
-    pin: "3.265 mAh",
+    bonhotrong: "256GB",
+    pin: "4200 mAh",
     os: "iOS 18",
     price: 14990000,
     storage: "256GB",
@@ -84,13 +85,13 @@ let listProducts = [
       { thumnail: "asset/img/samsung4.webp", alt: "Ảnh 3" },
     ],
     desc: "Tùy chọn màu sắc mới của dòng điện thoại này ",
-    screen: "6.7 inchs",
+    screen: "5.5 inchs",
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
     ram: "8GB",
     bonhotrong: "256GB",
-    pin: "3.265 mAh",
+    pin: "3000 mAh",
     os: "iOS 18",
     price: 309800000,
     storage: "256GB",
@@ -109,13 +110,13 @@ let listProducts = [
       { thumnail: "asset/img/samsung4.webp", alt: "Ảnh 3" },
     ],
     desc: "Tùy chọn màu sắc mới của dòng điện thoại này ",
-    screen: "6.7 inchs",
+    screen: "6.8 inchs",
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
     ram: "8GB",
     bonhotrong: "256GB",
-    pin: "3.265 mAh",
+    pin: "3500 mAh",
     os: "iOS 18",
     price: 30800000,
     storage: "256GB",
@@ -134,13 +135,13 @@ let listProducts = [
       { thumnail: "asset/img/samsung4.webp", alt: "Ảnh 3" },
     ],
     desc: "Tùy chọn màu sắc mới của dòng điện thoại này ",
-    screen: "6.7 inchs",
+    screen: "6.3 inchs",
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
     ram: "8GB",
     bonhotrong: "256GB",
-    pin: "3.265 mAh",
+    pin: "4300 mAh",
     os: "iOS 18",
     price: 20800000,
     storage: "256GB",
@@ -159,13 +160,13 @@ let listProducts = [
       { thumnail: "asset/img/iphone4.webp", alt: "Ảnh 3" },
     ],
     desc: "Tùy chọn màu sắc mới của dòng điện thoại này ",
-    screen: "6.7 inchs",
+    screen: "5.8 inchs",
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
     ram: "8GB",
     bonhotrong: "256GB",
-    pin: "3.265 mAh",
+    pin: "3265 mAh",
     os: "iOS 18",
     price: 23990000,
     storage: "256GB",
@@ -184,13 +185,13 @@ let listProducts = [
       { thumnail: "asset/img/iphone4.webp", alt: "Ảnh 3" },
     ],
     desc: "Tùy chọn màu sắc mới của dòng điện thoại này ",
-    screen: "6.7 inchs",
+    screen: "6.8 inchs",
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
     ram: "8GB",
     bonhotrong: "256GB",
-    pin: "3.265 mAh",
+    pin: "3500 mAh",
     os: "iOS 18",
     price: 23990000,
     storage: "256GB",
@@ -208,13 +209,13 @@ let listProducts = [
       { thumnail: "asset/img/samsung4.webp", alt: "Ảnh 3" },
     ],
     desc: "Tùy chọn màu sắc mới của dòng điện thoại này ",
-    screen: "6.7 inchs",
+    screen: "6.4 inchs",
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
     ram: "8GB",
     bonhotrong: "256GB",
-    pin: "3.265 mAh",
+    pin: "4000 mAh",
     os: "iOS 18",
     price: 309800000,
     storage: "256GB",
@@ -238,7 +239,7 @@ let listProducts = [
     chipset: "Apple A18 Pro",
     ram: "8GB",
     bonhotrong: "256GB",
-    pin: "3.265 mAh",
+    pin: "3265 mAh",
     os: "iOS 18",
     price: 309800000,
     storage: "256GB",
@@ -256,13 +257,13 @@ let listProducts = [
       { thumnail: "asset/img/samsung4.webp", alt: "Ảnh 3" },
     ],
     desc: "Tùy chọn màu sắc mới của dòng điện thoại này ",
-    screen: "6.7 inchs",
+    screen: "5.8 inchs",
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
     ram: "8GB",
     bonhotrong: "256GB",
-    pin: "3.265 mAh",
+    pin: "5000 mAh",
     os: "iOS 18",
     price: 309800000,
     storage: "256GB",
@@ -284,7 +285,7 @@ let listProducts = [
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
-    ram: "8GB",
+    ram: "4GB",
     bonhotrong: "256GB",
     pin: "3.265 mAh",
     os: "iOS 18",
@@ -308,7 +309,7 @@ let listProducts = [
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
-    ram: "8GB",
+    ram: "6GB",
     bonhotrong: "256GB",
     pin: "3.265 mAh",
     os: "iOS 18",
@@ -332,7 +333,7 @@ let listProducts = [
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
-    ram: "8GB",
+    ram: "4GB",
     bonhotrong: "256GB",
     pin: "3.265 mAh",
     os: "iOS 18",
@@ -356,7 +357,7 @@ let listProducts = [
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
-    ram: "8GB",
+    ram: "4GB",
     bonhotrong: "256GB",
     pin: "3.265 mAh",
     os: "iOS 18",
@@ -380,7 +381,7 @@ let listProducts = [
     cameratruoc: "12MP, ƒ/1.9, Tự động lấy nét theo pha Focus Pixels",
     camerasau: "48MP, f/1.78, 24mm, 2µm",
     chipset: "Apple A18 Pro",
-    ram: "8GB",
+    ram: "6GB",
     bonhotrong: "256GB",
     pin: "3.265 mAh",
     os: "iOS 18",
@@ -922,50 +923,270 @@ displayListByBrand(brandProduct);
 function showFilter() {
   document.getElementsByClassName("filter")[0].innerHTML = `
     <div class="filter-box filter-synthetic">
-              <i class="fa-solid fa-filter"></i>
-              <span class="text-filter">Lọc</span>
+      <i class="fa-solid fa-filter"></i>
+      <span class="text-filter">Lọc</span>
+
+      <form onsubmit="syntheticFilter(event)">
+        <div class="options-filter">
+          <div class="pin option">
+            <h4>Dung lượng pin</h4>
+            <div class="value-select">
+              <span id="bt34" onclick="selectValue(this, 'battery')">3000-4000 mAh</span>
+              <span id="bt45" onclick="selectValue(this, 'battery')">4000-5000 mAh</span>
+              <span id="bt56" onclick="selectValue(this, 'battery')">5000-6000 mAh</span>
+              <span id="bt67" onclick="selectValue(this, 'battery')">6000-7000 mAh</span>
             </div>
-            
-            <div class="filter-box filter-about">
-              <i class="fa-solid fa-coins"></i>
-              <span class="text-filter">Khoảng giá</span>
-              <form onsubmit="filterAboutPrice(event)">
-                <div class="slider-container">
-                  <input
-                    type="range"
-                    id="rangeSlider"
-                    min="2000000"
-                    max="100000000"
-                    value="5000000"
-                    step="200000"
-                    oninput="updateSliderValue(event)"
-                  />
-                  <span id="sliderValue"></span>
-                  <input type="submit" value="Áp dụng" />
-                </div>
-              </form>
+          </div>
+          <div class="ram option">
+            <h4>Ram</h4>
+            <div class="value-select">
+              <span id="ram4" onclick="selectValue(this, 'ram')">4GB</span>
+              <span id="ram6" onclick="selectValue(this, 'ram')">6GB</span>
+              <span id="ram8" onclick="selectValue(this, 'ram')">8GB</span>
+              <span id="ram12" onclick="selectValue(this, 'ram')">12GB</span>
             </div>
-            
-            <div
-              class="filter-box filter-hTol"
-              id="dec"
-              onclick="sortProductsByPrice(this)"
-            >
-              <i class="fa-solid fa-arrow-down-wide-short"></i>
-              <span class="text-filter">Giá giảm dần</span>
+          </div>
+          <div class="rom option">
+            <h4>Rom</h4>
+            <div class="value-select">
+              <span id="rom32" onclick="selectValue(this, 'rom')">32GB</span>
+              <span id="rom64" onclick="selectValue(this, 'rom')">64GB</span>
+              <span id="rom128" onclick="selectValue(this, 'rom')">128GB</span>
+              <span id="rom256" onclick="selectValue(this, 'rom')">256GB</span>
+              <span id="rom512" onclick="selectValue(this, 'rom')">512GB</span>
+              <span id="rom1024" onclick="selectValue(this, 'rom')">1TB</span>
+            </div>          
+          </div>
+          <div class="screen option">
+             <h4>Kích thước màn hình</h4>
+            <div class="value-select">
+              <span id="scr55" onclick="selectValue(this, 'screen')">Bé hơn 5.5 inch</span>
+              <span id="scr5563" onclick="selectValue(this, 'screen')">5.5-6.3 inch</span>
+              <span id="scr6467" onclick="selectValue(this, 'screen')">6.4-6.7 inch</span>
+              <span id="scr68" onclick="selectValue(this, 'screen')">Lớn hơn 6.8 inch</span>
             </div>
-            
-            <div
-              class="filter-box filter-lToh"
-              id="inc"
-              onclick="sortProductsByPrice(this)"
-            >
-              <i class="fa-solid fa-arrow-up-wide-short"></i>
-              <span class="text-filter">Giá tăng dần</span>
-            </div>
+          </div>
+        </div>
+        <input type="submit" value="Áp dụng" />
+      </form>
+    </div>
+
+    <div class="filter-box filter-about">
+      <i class="fa-solid fa-coins"></i>
+      <span class="text-filter">Khoảng giá</span>
+      <form onsubmit="filterAboutPrice(event)">
+        <div class="slider-container">
+          <input
+            type="range"
+            id="rangeSlider"
+            min="2000000"
+            max="100000000"
+            value="5000000"
+            step="200000"
+            oninput="updateSliderValue(event)"
+          />
+          <span id="sliderValue"></span>
+          <input type="submit" value="Áp dụng" />
+        </div>
+      </form>
+    </div>
+
+    <div
+      class="filter-box filter-hTol"
+      id="dec"
+      onclick="sortProductsByPrice(this)"
+    >
+      <i class="fa-solid fa-arrow-down-wide-short"></i>
+      <span class="text-filter">Giá giảm dần</span>
+    </div>
+
+    <div
+      class="filter-box filter-lToh"
+      id="inc"
+      onclick="sortProductsByPrice(this)"
+    >
+      <i class="fa-solid fa-arrow-up-wide-short"></i>
+      <span class="text-filter">Giá tăng dần</span>
+    </div>
   `;
 }
+
 showFilter();
+
+// ====================================== HÀM THÊM ACTIVE CHO CÁC MỤC ĐƯỢC CHỌN ===============================
+
+function selectValue(selectedSpan, filterType) {
+  const allSpans = selectedSpan.parentElement.getElementsByTagName("span");
+  const isActive = selectedSpan.classList.contains("active");
+
+  // Xóa class active khỏi tất cả các thẻ span
+  for (let span of allSpans) {
+    span.classList.remove("active");
+  }
+
+  // Nếu thẻ chưa có class active, thêm class active vào thẻ được chọn
+  if (!isActive) {
+    selectedSpan.classList.add("active");
+  } else {
+    // Nếu thẻ đã có class active, xóa class active
+    selectedSpan.classList.remove("active");
+  }
+}
+
+// ========================= HÀM CẮT DỮ LIỆU CẦN LỌC =====================================
+
+function getSelectedBattery() {
+  const activeSpan = document.querySelector(
+    ".filter .pin .value-select .active"
+  );
+
+  // Kiểm tra nếu không tìm thấy activeSpan
+  if (!activeSpan) {
+    return null; // Hoặc trả về một giá trị mặc định
+  }
+
+  // Lấy nội dung văn bản
+  let content = activeSpan.textContent;
+
+  // Tìm vị trí khoảng trắng đầu tiên
+  const indexCut = content.indexOf(" ");
+  content = content.slice(0, indexCut); // Cắt từ đầu đến khoảng trắng
+
+  // Chia và chuyển đổi thành số
+  let value = content.split("-").map(Number);
+  return value;
+}
+
+function getRamValue() {
+  const activeSpan = document.querySelector(
+    ".filter .ram .value-select .active"
+  );
+
+  // Kiểm tra nếu không tìm thấy activeSpan
+  if (!activeSpan) {
+    return null; // Hoặc trả về một giá trị mặc định
+  }
+
+  let content = activeSpan.textContent;
+
+  const indexCut = content.indexOf("GB");
+  content = content.slice(0, indexCut);
+
+  let value = Number(content);
+
+  return value;
+}
+
+function getRomValue() {
+  const activeSpan = document.querySelector(
+    ".filter .rom .value-select .active"
+  );
+
+  // Kiểm tra nếu không tìm thấy activeSpan
+  if (!activeSpan) {
+    return null; // Hoặc trả về một giá trị mặc định
+  }
+
+  let content = activeSpan.textContent;
+
+  const indexCut = content.indexOf("GB");
+  content = content.slice(0, indexCut);
+
+  let value = Number(content);
+
+  return value;
+}
+
+function getScreenValue() {
+  // Tìm phần tử có class '.active' trong các thẻ <span> chứa kích thước màn hình
+  const activeSpan = document.querySelector(".screen .value-select .active");
+
+  // Kiểm tra nếu không có phần tử nào được chọn
+  if (!activeSpan) {
+    return null; // Hoặc bạn có thể trả về một giá trị mặc định
+  }
+
+  // Lấy nội dung văn bản của thẻ activeSpan
+  const content = activeSpan.textContent;
+
+  // Cắt nội dung để lấy giá trị kích thước màn hình
+  // Nếu có định dạng cụ thể, bạn có thể cắt theo cách khác
+  // Ví dụ: "5.5-6.3 inch" => ["5.5", "6.3"]
+  const sizeValues = content.match(/(\d+(\.\d+)?)/g).map(Number); // Lấy tất cả số trong chuỗi
+
+  if (content.includes("Bé hơn")) sizeValues.unshift(0);
+  if (content.includes("Lớn hơn")) sizeValues.push(0);
+
+  return sizeValues; // Chuyển đổi các giá trị thành số
+}
+
+// =========================== HÀM LỌC SẢN PHẨM THEO NHIỀU TIÊU CHÍ ====================================
+function syntheticFilter(event) {
+  event.preventDefault(); // Ngăn chặn hành động gửi biểu mẫu
+
+  const batteryValue = getSelectedBattery();
+  const ramValue = getRamValue();
+  const romValue = getRomValue();
+  const screenValue = getScreenValue();
+
+  // Kiểm tra mảng sản phẩm
+  if (!Array.isArray(productsByBrand)) {
+    console.error("productsByBrand không phải là một mảng.");
+    return;
+  }
+
+  // lưu mảng vào một biến gốc
+  const originalProductsByBrand = productsByBrand.slice(); // Sao chép mảng
+  let filteredArr = [];
+
+  for (let element of productsByBrand) {
+    if (
+      !element.pin ||
+      !element.ram ||
+      !element.bonhotrong ||
+      !element.screen
+    ) {
+      console.error(
+        "Một trong các thuộc tính sản phẩm là null hoặc undefined."
+      );
+      continue; // Bỏ qua sản phẩm này
+    }
+
+    // lấy dữ liệu từng sản phẩm và cắt lấy đúng giá trị số
+    const pinCut = element.pin.indexOf(" ");
+    let pinOfProduct = Number(element.pin.slice(0, pinCut));
+    const ramGB = element.ram.indexOf("GB");
+    let ramOfProduct = Number(element.ram.slice(0, ramGB));
+    const romGB = element.bonhotrong.indexOf("GB");
+    let romOfProduct = Number(element.bonhotrong.slice(0, romGB));
+    const scrMAH = element.screen.indexOf(" ");
+    let scrOfProduct = Number(element.screen.slice(0, scrMAH));
+
+    if (
+      batteryValue &&
+      pinOfProduct >= batteryValue[0] &&
+      pinOfProduct <= batteryValue[1]
+    ) {
+      filteredArr.push(element);
+    } else if (ramValue && ramOfProduct === ramValue) {
+      filteredArr.push(element);
+    } else if (romValue && romOfProduct === romValue) {
+      filteredArr.push(element);
+    } else if (
+      screenValue &&
+      scrOfProduct >= screenValue[0] &&
+      scrOfProduct <= screenValue[1]
+    ) {
+      filteredArr.push(element);
+    }
+  }
+
+  productsByBrand = filteredArr; // Cập nhật danh sách sản phẩm
+  currentPage = 1;
+  displayProductPerPage(currentPage);
+
+  productsByBrand = originalProductsByBrand; // cập nhật lại danh sách ban đầu
+}
 
 // ======================== HÀM HIỆN THỊ CÁC SẢN PHẨM TRÊN TRANG ==========================
 function displayProductPerPage(page) {
