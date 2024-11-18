@@ -884,6 +884,8 @@ let currentPage = 1; // Trang hiện tại
 const urlParams = new URLSearchParams(window.location.search);
 const brandProduct = urlParams.get("brand");
 const beginPage = urlParams.get("page");
+const found = urlParams.get("search");
+console.log("tu khoa vua tim ben index: ", found);
 
 console.log("brand: ", brandProduct);
 console.log("kiểu của brand: ", typeof brandProduct);
@@ -907,10 +909,10 @@ function displayListByBrand(brand) {
 
   console.log("danh sách theo hãng lúc này: ", productsByBrand);
 
-  if (productsByBrand.length === 0) {
-    alert("danh sach trong");
-    return;
-  }
+  // if (productsByBrand.length === 0) {
+  //   alert("danh sach trong");
+  //   return;
+  // }
 
   currentPage = 1;
   displayProductPerPage(currentPage);
@@ -918,6 +920,10 @@ function displayListByBrand(brand) {
 
 displayListByBrand(brandProduct);
 // console.log(productsByBrand);
+
+if (found) {
+  searchProduct();
+}
 
 // ======================== HÀM HIỆN THỊ BỘ LỌC ===========================================
 function showFilter() {
@@ -1327,8 +1333,11 @@ function updateSliderValue() {
 
 // =========================== HÀM TÌM KIẾM THEO TÊN SẢN PHẨM =============================
 function searchProduct(event) {
-  event.preventDefault();
+  if (event) {
+    event.preventDefault(); // Ngăn chặn hành vi mặc định nếu có event
+  }
   let nameFind = document.getElementById("search-box").value;
+  if (found) nameFind = found;
 
   productsByBrand = [];
   for (let element of listProducts) {
