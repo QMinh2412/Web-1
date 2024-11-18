@@ -328,11 +328,35 @@
 
       // hàm thay đổi nguồn ảnh
       function displayMainImage(src) {
-        if (document.getElementById("displayMainImg").src !== src)
-          document.getElementById("displayMainImg").src = src; // Thay đổi src của hình ảnh lớn
+        const mainImg = document.getElementById("displayMainImg");
+
+        if (mainImg.src.endsWith(src)) {
+          return; // Nếu giống nhau, không làm gì cả
+        }
+
+        // Thêm lớp fade-out để trượt và biến mất
+        mainImg.classList.add("fade-out");
+
+        // Đợi một thời gian để hiệu ứng trượt biến mất hoàn tất trước khi thay đổi hình ảnh
+        setTimeout(() => {
+          mainImg.src = src; // Thay đổi src của hình ảnh lớn
+          mainImg.classList.remove("fade-out"); // Gỡ bỏ lớp fade-out
+        }, 500); // Thời gian này phải khớp với thời gian trong transition CSS
       }
 
       showProductDetails();
+
+      function searchProduct(event) {
+        event.preventDefault(); // Ngăn form reload trang
+        const searchBox = document.getElementById("search-box");
+        const query = searchBox.value.trim(); // Lấy giá trị từ ô tìm kiếm
+        if (query) {
+          // Điều hướng sang trang SanPham.html với từ khóa tìm kiếm
+          window.location.href = `SanPham.html?search=${encodeURIComponent(
+            query
+          )}`;
+        }
+      }
     </script>
   </body>
 </html>
