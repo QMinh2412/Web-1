@@ -540,11 +540,15 @@ a {
   margin-top: 10px;
 }
 
+.product-display .pagination button {
+  margin: 5px;
+}
+
 .product-display .pagination .btn-page {
   width: 30px;
   height: 30px;
   /* color: rgb(237, 67, 67); */
-  margin-right: 10px;
+  /* margin-right: 10px; */
   border: 1px solid rgb(237, 67, 67);
   border-radius: 10px;
   background-color: #ffffff;
@@ -564,6 +568,12 @@ a {
   color: #fff;
   width: 28px;
   height: 28px;
+}
+
+.product-display .pagination .page-change {
+  color: #fff;
+  border-radius: 999px;
+  background-color: rgb(253, 83, 83);
 }
 
 /* ====================================== FOOTER =============================== */

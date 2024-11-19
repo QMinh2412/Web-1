@@ -1002,7 +1002,7 @@ function displayProductPerPage(page) {
   const cutArr = productsByBrand.slice(startIndex, endIndex); // Lấy phần tử cho trang hiện tại
 
   display(cutArr); // Hiển thị danh sách sản phẩm cắt từ productsByBrand
-  productPagination(); // Cập nhật phân trang dựa trên productsByBrand
+  productPagination(currentPage); // Cập nhật phân trang dựa trên productsByBrand
 
   // Cập nhật URL với số trang
   const brand = new URLSearchParams(window.location.search).get("brand");
@@ -1024,11 +1024,42 @@ window.addEventListener("popstate", function (event) {
 });
 
 // ===================== HÀM TẠO PHÂN TRANG ================================
-function productPagination(brand, page) {
+// function productPagination(brand, page) {
+//   const totalProduct = productsByBrand.length;
+//   const totalPage = Math.ceil(totalProduct / productPerPage); // Tổng số trang
+
+//   let paginationHTML = "";
+//   for (let i = 1; i <= totalPage; i++) {
+//     const isActive = i === currentPage;
+//     paginationHTML += `
+//       <button class="btn-page ${
+//         isActive ? "active" : ""
+//       }" onclick="displayProductPerPage(${i})">
+//         ${i}
+//       </button>
+//     `;
+//   }
+//   document.getElementById("pagination").innerHTML = paginationHTML;
+// }
+
+function productPagination(page) {
   const totalProduct = productsByBrand.length;
   const totalPage = Math.ceil(totalProduct / productPerPage); // Tổng số trang
 
   let paginationHTML = "";
+
+  // Nút quay lại trang trước
+  if (page > 1) {
+    paginationHTML += `
+      <button class="page-change btn-page" onclick="displayProductPerPage(${
+        page - 1
+      })">
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+    `;
+  }
+
+  // Hiển thị các nút trang
   for (let i = 1; i <= totalPage; i++) {
     const isActive = i === currentPage;
     paginationHTML += `
@@ -1039,6 +1070,19 @@ function productPagination(brand, page) {
       </button>
     `;
   }
+
+  // Nút chuyển sang trang sau
+  if (page < totalPage) {
+    paginationHTML += `
+      <button class="page-change btn-page" onclick="displayProductPerPage(${
+        page + 1
+      })">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+    `;
+  }
+  console.log("số trang: ", paginationHTML);
+
   document.getElementById("pagination").innerHTML = paginationHTML;
 }
 
@@ -1120,7 +1164,7 @@ function filterAboutPrice(event) {
 
   currentPage = 1; // Đặt lại trang hiện tại về 1
   displayProductPerPage(currentPage); // Hiển thị sản phẩm đã lọc theo trang đầu
-  productPagination(); // Cập nhật phân trang dựa trên productsByBrand
+  productPagination(currentPage); // Cập nhật phân trang dựa trên productsByBrand
 }
 
 // hàm cập nhật giá trị slider cho khoảng giá
