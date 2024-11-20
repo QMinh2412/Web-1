@@ -680,8 +680,33 @@ listProducts = JSON.parse(localStorage.getItem("data"));
 // ======================== KHAI BÁO BIẾN ==============================
 let productsByBrand = [];
 let originalProductsByBrand = []; // Mảng tạm lưu danh sách sản phẩm theo hãng ban đầu
-let productPerPage = 10;
+let productPerPage;
 let currentPage = 1; // Trang hiện tại
+
+function handleResponsiveChange() {
+  const width = window.innerWidth;
+
+  // Thay đổi số sản phẩm hiển thị dựa trên kích thước
+  if (width > 1024) {
+    productPerPage = 10; // Desktop
+  } else if (width > 900) {
+    productPerPage = 8; // Tablet
+  } else {
+    productPerPage = 6; // Mobile
+  }
+
+  console.log(`Width: ${width}px, Số sản phẩm/trang: ${productPerPage}`);
+
+  // Cập nhật giao diện sản phẩm
+  currentPage = 1; // Reset về trang đầu
+  displayProductPerPage(currentPage); // Hiển thị sản phẩm với số lượng mới
+}
+
+// Gọi hàm ngay khi trang tải
+handleResponsiveChange();
+
+// Lắng nghe sự kiện thay đổi kích thước màn hình
+window.addEventListener("resize", handleResponsiveChange);
 
 // ====================== HÀM IN SẢN PHẨM THEO HÃNG ===========================
 const urlParams = new URLSearchParams(window.location.search);
