@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group 55 | Lịch Sử Mua Hàng</title>
+    <link rel="stylesheet" href="./asset/css/HistoryCart.css" />
+    <link rel="shortcut icon" href="asset/img/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    /> -->
+    <!-- Biểu tượng -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <style>
+      .product-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      .product-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        transition: transform 0.3s;
+      }
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Modal Đăng nhập */
+      .modal-content {
+        border: none;
+        border-radius: 12px;
+      }
+      .left-panel {
+        background: linear-gradient(135deg, #ff416c, #ff4b2b);
+        color: #fff;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .right-panel {
+        padding: 40px;
+      }
+      .btn-login,
+      .btn-register {
+        border-radius: 25px;
+      }
+      #scrollToTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #d10000;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        font-size: 30px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: none;
+      }
+      #scrollToTop:hover {
+        background-color: #d10000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header py-3">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="./index.html">
+            <img
+              src="./asset/img/logo.jpg"
+              alt="Logo"
+              class="me-2"
+            />
+          </a>
+
+          <!-- Thanh tìm kiếm -->
+          <form class="d-flex mx-auto w-50" onsubmit="searchProduct(event)">
+            <div class="search-box">
+              <input
+                class="form-control me-2"
+                id="search-box"
+                type="search"
+                placeholder="Bạn cần tìm gì?"
+                aria-label="Tìm kiếm"
+                autocomplete="off"
+              />
+              <button class="btn btn-light" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+
+          <div class="d-flex align-items-center">
+            <a href="SanPham.html?brand=null&page=1">
+              <button class="btn btn-outline-light me-2 catogory-product">
+                <i class="bi bi-card-list"></i> <span>Sản phẩm</span>
+              </button>
+            </a>
+          </div>
+            <button class="btn btn-outline-light me-2" id="historybutton">
+              <i class="bi bi-clock-history"></i> <span
+              >Lịch sử mua hàng</span
+               >
+            </button>
+            <button class="btn btn-outline-light me-2" id="cart-poiter">
+              <i class="bi bi-cart"></i> <span>Giỏ hàng</span>
+            </button>
+            <button id="userBtn"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal">
+              <a href="account.html"><i class="bi bi-person"></i> <span>User</span></a>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="cps-container">
+      <div class="cps-order-page">
+        <div class="block-welcome">
+          <div class="block-welcome__box-content">
+            <div class="welcome-avatar">
+              <img
+                src="/asset/img/Avatar-member.webp"
+                width="50"
+                height="50"
+                alt="cps-icon"
+              />
+            </div>
+            <div class="welcome-member">
+              <p class="welcome-member__name"></p>
+              <div class="welcome-member__items">
+                <p class="welcome-member__phone">0339220541</p>
+                <svg
+                  height="15"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 576 512"
+                  class="cps-icon view-icon"
+                >
+                  <path
+                    d="M279.6 160.4C282.4 160.1 285.2 160 288 160C341 160 384 202.1 384 256C384 309 341 352 288 352C234.1 352 192 309 192 256C192 253.2 192.1 250.4 192.4 247.6C201.7 252.1 212.5 256 224 256C259.3 256 288 227.3 288 192C288 180.5 284.1 169.7 279.6 160.4zM480.6 112.6C527.4 156 558.7 207.1 573.5 243.7C576.8 251.6 576.8 260.4 573.5 268.3C558.7 304 527.4 355.1 480.6 399.4C433.5 443.2 368.8 480 288 480C207.2 480 142.5 443.2 95.42 399.4C48.62 355.1 17.34 304 2.461 268.3C-.8205 260.4-.8205 251.6 2.461 243.7C17.34 207.1 48.62 156 95.42 112.6C142.5 68.84 207.2 32 288 32C368.8 32 433.5 68.84 480.6 112.6V112.6zM288 112C208.5 112 144 176.5 144 256C144 335.5 208.5 400 288 400C367.5 400 432 335.5 432 256C432 176.5 367.5 112 288 112z"
+                  ></path>
+                </svg>
+                <svg
+                  height="15"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                  class="cps-icon block-icon"
+                >
+                  <path
+                    d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zM373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5L373 389.9z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="label-rank">
+                <p class="welcomne-member__level">Snull</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-homepage-menu">
+          <div class="block-homepage-menu__content">
+            <div class="content-item">
+              <p class="item-content title">0</p>
+              <p class="item-content text">Đơn hàng</p>
+            </div>
+            <div class="content-item">
+              <p class="item-content title">0đ</p>
+              <p class="item-content text">Tổng tiền tích lũy</p>
+            </div>
+          </div>
+        </div>
+        <div class="cps-container">
+          <div class="block-order">
+            <div class="block-sliding-order">
+              <div id="dateRange" class="options-item calendar">
+                <div class="cps-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.72223 2.5V6.72222"
+                      stroke="#767676"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    ></path>
+                    <path
+                      d="M17.2778 2.5V6.72222"
+                      stroke="#767676"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    ></path>
+                    <path
+                      d="M22.25 6.61108V19.5H20.75V6.61108H22.25ZM1.75 19.5V6.61108H3.25V19.5H1.75ZM4.5 3.86108H19.5V5.36108H4.5V3.86108ZM4.5 20.75H19.5V22.25H4.5V20.75ZM1.75 6.61108C1.75 5.0923 2.98122 3.86108 4.5 3.86108V5.36108C3.80964 5.36108 3.25 5.92073 3.25 6.61108H1.75ZM3.25 19.5C3.25 20.1903 3.80964 20.75 4.5 20.75V22.25C2.98122 22.25 1.75 21.0188 1.75 19.5H3.25ZM22.25 19.5C22.25 21.0188 21.0188 22.25 19.5 22.25V20.75C20.1904 20.75 20.75 20.1903 20.75 19.5H22.25ZM20.75 6.61108C20.75 5.92073 20.1904 5.36108 19.5 5.36108V3.86108C21.0188 3.86108 22.25 5.0923 22.25 6.61108H20.75Z"
+                      fill="#767676"
+                    ></path>
+                    <path
+                      d="M2.5 9.88892H12H21.5"
+                      stroke="#767676"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="daterange-picker">
+                  <div class="form-control">
+                    <span>01/12/2020 - 20/11/2024</span>
+                  </div>
+                </div>
+              </div>
+              <div class="order-container">
+                <div class="thumbs-wrapper">
+                  <div class="thumb-item">Tất cả</div>
+                  <div class="thumb-item">Chờ xác nhận</div>
+                  <div class="thumb-item">Đã xác nhận</div>
+                  <div class="thumb-item">Đang vận chuyển</div>
+                  <div class="thumb-item">Đã giao hàng</div>
+                  <div class="thumb-item">Đã hủy</div>
+                </div>
+              </div>
+              <div class="list-order-wrapper">
+                <!-- <div class="list-order-wrapper__items">
+                  <div class="view-list-wrapper">
+                    <div class="item" style="display: flex">
+                      <img
+                        src="http://127.0.0.1:5500/asset/img/ip4-1.webp"
+                        alt="iPhone 15 128GB | Chính hãng VN/A"
+                        style="width: 100px; height: 100px"
+                      />
+                      <div class="item__info">
+                        <p class="item__name">
+                          iPhone 15 128GB | Chính hãng VN/A
+                        </p>
+                        <div class="item__price">
+                          <div>
+                            <div class="block-box-price">
+                              <span></span>
+                              <div class="box-info__box-price">
+                                <p class="product__price--show">19.690.000₫</p>
+                                <p class="product__price--through"></p>
+                              </div>
+                            </div>
+                          </div>
+                          <p>Số lượng: <span class="text-danger">1</span></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item" style="display: flex">
+                      <img
+                        src="http://127.0.0.1:5500/asset/img/ss4-3.webp"
+                        alt="Samsung Galaxy S23 Ultra 12GB 512GB"
+                        style="width: 100px; height: 100px"
+                      />
+                      <div class="item__info">
+                        <p class="item__name">
+                          Samsung Galaxy S23 Ultra 12GB 512GB
+                        </p>
+                        <div class="item__price">
+                          <div>
+                            <div class="block-box-price">
+                              <span></span>
+                              <div class="box-info__box-price">
+                                <p class="product__price--show">23.490.000₫</p>
+                                <p class="product__price--through"></p>
+                              </div>
+                            </div>
+                          </div>
+                          <p>Số lượng: <span class="text-danger">1</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="total-price">
+                      <p>Tổng số tiền : <span id="totalAmount">0₫</span></p>
+                    </div>
+                    <button id="toggleButton" class="show-all-button">
+                      Xem tất cả sản phẩm
+                    </button>
+                  </div>
+                </div>
+                <div class="list-order-wrapper__items">
+                  <div class="view-list-wrapper">
+                    <div class="item" style="display: flex">
+                      <img
+                        src="http://127.0.0.1:5500/asset/img/ip4-1.webp"
+                        alt="iPhone 15 128GB | Chính hãng VN/A"
+                        style="width: 100px; height: 100px"
+                      />
+                      <div class="item__info">
+                        <p class="item__name">
+                          iPhone 15 128GB | Chính hãng VN/A
+                        </p>
+                        <div class="item__price">
+                          <div>
+                            <div class="block-box-price">
+                              <span></span>
+                              <div class="box-info__box-price">
+                                <p class="product__price--show">19.690.000₫</p>
+                                <p class="product__price--through"></p>
+                              </div>
+                            </div>
+                          </div>
+                          <p>Số lượng: <span class="text-danger">1</span></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item" style="display: flex">
+                      <img
+                        src="http://127.0.0.1:5500/asset/img/ss4-3.webp"
+                        alt="Samsung Galaxy S23 Ultra 12GB 512GB"
+                        style="width: 100px; height: 100px"
+                      />
+                      <div class="item__info">
+                        <p class="item__name">
+                          Samsung Galaxy S23 Ultra 12GB 512GB
+                        </p>
+                        <div class="item__price">
+                          <div>
+                            <div class="block-box-price">
+                              <span></span>
+                              <div class="box-info__box-price">
+                                <p class="product__price--show">23.490.000₫</p>
+                                <p class="product__price--through"></p>
+                              </div>
+                            </div>
+                          </div>
+                          <p>Số lượng: <span class="text-danger">1</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="total-price">
+                      <p>Tổng số tiền : <span id="totalAmount">0₫</span></p>
+                    </div>
+                    <button id="toggleButton" class="show-all-button">
+                      Xem tất cả sản phẩm
+                    </button>
+                  </div>
+                </div>
+                <div class="no-order">
+                  <img src="/asset/img/Cart-empty.webp" alt="" />
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="scrollToTop" onclick="scrollToTop()">&#8679;</button>
+    <script src="./asset/js/HistoryCart.js"></script>
+    <script>
+      // Hiển thị nút khi cuộn xuống
+      window.onscroll = function () {
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+
+      // Hàm cuộn lên đầu trang
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function searchProduct(event) {
+        event.preventDefault(); // Ngăn form reload trang
+        const searchBox = document.getElementById("search-box");
+        const query = searchBox.value.trim(); // Lấy giá trị từ ô tìm kiếm
+        if (query) {
+          // Điều hướng sang trang SanPham.html với từ khóa tìm kiếm
+          window.location.href = `SanPham.html?search=${encodeURIComponent(
+            query
+          )}`;
+        }
+      }
+    </script>
+  </body>
+</html>

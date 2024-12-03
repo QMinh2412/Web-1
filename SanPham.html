@@ -11,106 +11,120 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./asset/SanPham.css" />
-    <!-- <link rel="stylesheet" href="./asset/responsiveSanPham.css" /> -->
+    <!-- Biểu tượng -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./asset/css/SanPham.css" />
     <title>sản phẩm</title>
+    <link rel="shortcut icon" href="asset/img/logo.jpg">
+
   </head>
   <body>
-    <header>
-      <div class="header">
-        <div class="body-header">
-          <div class="main-content">
-            <div class="logo">
-              <img src="./asset/img/logo.jpg" alt="" />
+    <!-- Header -->
+    <header class="header py-3">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="./index.html">
+            <img
+              src="./asset/img/logo.jpg"
+              alt="Logo"
+              class="me-2"
+            />
+          </a>
+
+          <!-- Thanh tìm kiếm -->
+          <form class="d-flex mx-auto w-50" onsubmit="searchProduct(event)">
+            <div class="search-box">
+              <input
+                class="form-control me-2"
+                id="search-box"
+                type="search"
+                placeholder="Bạn cần tìm gì?"
+                aria-label="Tìm kiếm"
+                autocomplete="off"
+              />
+              <button class="btn btn-light" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
             </div>
+          </form>
 
-            <div class="catogory catogory-product">
-              <a href="SanPham.html?brand=null&page=1">
-                <i class="fa-solid fa-table-list"></i>
-                <span class="text-catogory">Sản phẩm</span>
-              </a>
-
-              <div class="hover-branch-list">
-                <div class="buffer"></div>
-                <ul style="color: black">
-                  <a
-                    href="SanPham.html?brand=iphone&page=1"
-                    class="brand-link"
-                    id="iphone"
-                    ><li>iPhone</li></a
-                  >
-                  <a
-                    href="SanPham.html?brand=samsung&page=1"
-                    class="brand-link"
-                    id="samsung"
-                    ><li>Samsung</li></a
-                  >
-
-                  <a
-                    href="SanPham.html?brand=oppo&page=1"
-                    class="brand-link"
-                    id="oppo"
-                    ><li>Oppo</li></a
-                  >
-
-                  <a href="#" class="brand-link" id="redmi"><li>Redmi</li></a>
-
-                  <a
-                    href="SanPham.html?brand=xiaomi&page=1"
-                    class="brand-link"
-                    id="xiaomi"
-                    ><li>Xiaomi</li></a
-                  >
-
-                  <a href="#" class="brand-link" id="vivo"><li>Vivo</li></a>
-
-                  <a href="#" class="brand-link" id="huawei"><li>Huawei</li></a>
-
-                  <a href="#" class="brand-link" id="nokia"><li>Nokia</li></a>
-
-                  <a href="#" class="brand-link" id="TECH NO"
-                    ><li>TECH NO</li></a
-                  >
-                </ul>
-              </div>
-            </div>
-
-            <form onsubmit="searchProduct(event)">
-              <div class="search-box">
-                <input
-                  type="text"
-                  name="search-box"
-                  id="search-box"
-                  placeholder="Bạn muốn tìm gì ?"
-                  size="38"
-                  autocomplete="off"
-                />
-                <input type="submit" value="Tìm kiếm" />
-              </div>
-            </form>
-
-            <div class="catogory catogory-history">
-              <i class="fa-solid fa-clock-rotate-left"></i>
-              <span class="text-catogory">Lịch sử mua hàng</span>
-            </div>
-
-            <div class="catogory catogory-cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="text-catogory">Giỏ hàng</span>
-            </div>
-
-            <div class="catogory catogory-user">
-              <i class="fa-solid fa-user"></i>
-              <span class="text-catogory">User</span>
-            </div>
+          <div class="d-flex align-items-center">
+            <a href="SanPham.html?brand=null&page=1">
+              <button class="btn btn-outline-light me-2 catogory-product">
+                <i class="bi bi-card-list"></i> <span>Sản phẩm</span>
+              </button>
+            </a>
+          </div>
+            <button class="btn btn-outline-light me-2" id="historybutton">
+              <i class="bi bi-clock-history"></i> <span
+              >Lịch sử mua hàng</span
+               >
+            </button>
+            <button class="btn btn-outline-light me-2" id="cart-poiter">
+              <i class="bi bi-cart"></i> <span>Giỏ hàng</span>
+            </button>
+            <button id="userBtn"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal">
+              <i class="bi bi-person"></i> <span>User</span>
+            </button>
           </div>
         </div>
-      </div>
+      </nav>
     </header>
 
     <main>
       <div class="body-main">
         <div class="main-content">
+          <div class="hover-branch-list">
+            <ul style="color: black">
+              <a
+                href="SanPham.html?brand=apple&page=1"
+                class="brand-link"
+                id="apple"
+                ><li>Apple</li></a
+              >
+              <a
+                href="SanPham.html?brand=samsung&page=1"
+                class="brand-link"
+                id="samsung"
+                ><li>Samsung</li></a
+              >
+
+              <a
+                href="SanPham.html?brand=oppo&page=1"
+                class="brand-link"
+                id="oppo"
+                ><li>Oppo</li></a
+              >
+
+              <a href="SanPham.html?brand=realme&page=1" class="brand-link" id="redmi"><li>Realme</li></a>
+
+              <a
+                href="SanPham.html?brand=xiaomi&page=1"
+                class="brand-link"
+                id="xiaomi"
+                ><li>Xiaomi</li></a
+              >
+
+              <a href="SanPham.html?brand=vivo&page=1" class="brand-link" id="vivo"><li>Vivo</li></a>
+
+              <a href="SanPham.html?brand=huawei&page=1" class="brand-link" id="huawei"><li>Huawei</li></a>
+
+              <a href="SanPham.html?brand=nokia&page=1" class="brand-link" id="nokia"><li>Nokia</li></a>
+
+              <a href="SanPham.html?brand=tech no&page=1" class="brand-link" id="TECH NO"
+                ><li>TECH NO</li></a
+              >
+            </ul>
+          </div>
           <!-- bộ lọc -->
           <div class="filter"></div>
           <!-- trưng bày sản phẩm -->
@@ -125,73 +139,53 @@
     </main>
 
     <footer>
-      <div class="body-footer">
-        <div class="main-content">
-          <div class="address-shop">
-            <div class="address">
-              <img src="./asset/img/map.png" alt="Địa chỉ cửa hàng" />
-            </div>
-            <div class="info-shop">
-              <div class="connect location">
-                <div class="head">
-                  <i class="fa-solid fa-location-dot"></i>
-                  <h4>Địa chỉ</h4>
-                </div>
-                <p>273 An Dương Vương, P.03, Q.05, TP Hồ Chí Minh</p>
-              </div>
-              <div class="connect phone">
-                <div class="head">
-                  <i class="fa-solid fa-phone"></i>
-                  <h4>Hotline</h4>
-                </div>
-                <p>090.123.4567 (8:00 - 22:00)</p>
-              </div>
-              <div class="connect email">
-                <div class="head">
-                  <i class="fa-solid fa-envelope"></i>
-                  <h4>Email</h4>
-                </div>
-                <p>group55@gmail.com</p>
-              </div>
-            </div>
-          </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Thông Tin Cửa Hàng</h3>
+          <p>Cửa Hàng GROUP 55</p>
+          <p>273 Đ. An Dương Vương, P. 03, Q. 05, Tp. Hồ Chí Minh</p>
+          <p>Hotline: 0912.345.678</p>
         </div>
-        <div class="return-head">
-          <a href="#"><i class="fa-solid fa-angle-up"></i></a>
+
+        <div class="footer-section">
+          <h3>Chính Sách</h3>
+          <ul>
+            <li>Quy chế hoạt động</li>
+            <li>Chính sách Bảo hành</li>
+            <li>Liên hệ hợp tác kinh doanh</li>
+            <li>Đơn Doanh nghiệp</li>
+          </ul>
         </div>
-        <div class="policy-shop">
-          <div class="info">
-            <h4>Thông tin cửa hàng</h4>
-            <p>Cửa hàng GROUP 55</p>
-            <p>273 An Dương Vương P3 Q5 TPHCM</p>
-            Hotline: 090.123.4567
-          </div>
-          <div class="policy">
-            <h4>Chính sách</h4>
-            <p>Quy chế hoạt động</p>
-            <p>Chính sách bảo hành</p>
-            <p>Liên hệ hợp tác kinh doanh</p>
-            <p>Đơn doanh nghiệp</p>
-          </div>
-          <div class="guarantee">
-            <h4>Bảo hành</h4>
-            <p>Tra thông tin bảo hành</p>
-            <p>Trung tâm bảo hành chính hãng</p>
-            <p>Quy định về việc sao lưu dữ liệu</p>
-            <p>Dịch vụ bảo hành điện thoại</p>
-          </div>
-          <div class="hotline">
-            <h4>Hotline</h4>
-            <p>Gọi mua hàng: 123455667890</p>
-            <p>Gọi khiếu nại: 1122334455</p>
-            <p>Gọi bảo hành: 0987654321</p>
-            <p>(8:00 - 22:00)</p>
-          </div>
+
+        <div class="footer-section">
+          <h3>Bảo Hành</h3>
+          <ul>
+            <li>Tra thông tin bảo hành</li>
+            <li>Trung tâm bảo hành chính hãng</li>
+            <li>Quy định về việc sao lưu dữ liệu</li>
+            <li>Dịch vụ bảo hành điện thoại</li>
+          </ul>
         </div>
-        <div class="source">2024 | Copyright by <span>GROUP 55</span></div>
+
+        <div class="footer-section">
+          <h3>Hotline</h3>
+          <ul>
+            <li>Gọi mua hàng: 0912.345.678</li>
+            <li>Gọi khiếu nại: 0923.456.789</li>
+            <li>Gọi bảo hành: 0934.567.891</li>
+            <li>(08:00 - 22:00)</li>
+          </ul>
+        </div>
       </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 | Copyright by <span>GROUP 55</span></p>
+      </div>
+
+      <button id="scrollToTop" onclick="scrollToTop()">&#8679;</button>
     </footer>
 
-    <script src="./SanPham.js"></script>
+    <script src="./asset/js/SanPham.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

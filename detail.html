@@ -11,124 +11,76 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./asset/SanPham.css" />
-    <!-- <link rel="stylesheet" href="./asset/responsiveSanPham.css" /> -->
+    <!-- Biểu tượng -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./asset/css/SanPham.css" />
     <title>Document</title>
+    <link rel="shortcut icon" href="asset/img/logo.jpg">
+
   </head>
+  <div id="customAlert" class="custom-alert">
+    <p id="alertMessage"></p>
+    <button id="closeAlert" class="close-alert">X</button>
+  </div>
   <body>
-    <header>
-      <div class="header">
-        <div class="body-header">
-          <div class="main-content">
-            <div class="logo">
-              <img src="./asset/img/logo.jpg" alt="" />
+    <!-- Header -->
+    <header class="header py-3">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="./index.html">
+            <img
+              src="./asset/img/logo.jpg"
+              alt="Logo"
+              class="me-2"
+            />
+          </a>
+
+          <!-- Thanh tìm kiếm -->
+          <form class="d-flex mx-auto w-50" onsubmit="searchProduct(event)">
+            <div class="search-box">
+              <input
+                class="form-control me-2"
+                id="search-box"
+                type="search"
+                placeholder="Bạn cần tìm gì?"
+                aria-label="Tìm kiếm"
+                autocomplete="off"
+              />
+              <button class="btn btn-light" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
             </div>
+          </form>
 
-            <div class="catogory catogory-product">
-              <a href="SanPham.html?brand=null&page=1">
-                <i class="fa-solid fa-table-list"></i>
-                <span class="text-catogory">Sản phẩm</span>
-              </a>
-
-              <div class="hover-branch-list">
-                <div class="buffer"></div>
-                <ul style="color: black">
-                  <a
-                    href="SanPham.html?brand=iphone&page=1"
-                    class="brand-link"
-                    id="iphone"
-                    ><li>iPhone</li></a
-                  >
-                  <a
-                    href="SanPham.html?brand=samsung&page=1"
-                    class="brand-link"
-                    id="samsung"
-                    ><li>Samsung</li></a
-                  >
-
-                  <a
-                    href="SanPham.html?brand=oppo&page=1"
-                    class="brand-link"
-                    id="oppo"
-                    ><li>Oppo</li></a
-                  >
-
-                  <a
-                    href="SanPham.html?brand=redmi&page=1"
-                    class="brand-link"
-                    id="redmi"
-                    ><li>Redmi</li></a
-                  >
-
-                  <a
-                    href="SanPham.html?brand=xiaomi&page=1"
-                    class="brand-link"
-                    id="xiaomi"
-                    ><li>Xiaomi</li></a
-                  >
-
-                  <a
-                    href="SanPham.html?brand=vivo&page=1"
-                    class="brand-link"
-                    id="vivo"
-                    ><li>Vivo</li></a
-                  >
-
-                  <a
-                    href="SanPham.html?brand=huawei&page=1"
-                    class="brand-link"
-                    id="huawei"
-                    ><li>Huawei</li></a
-                  >
-
-                  <a
-                    href="SanPham.html?brand=nokia&page=1"
-                    class="brand-link"
-                    id="nokia"
-                    ><li>Nokia</li></a
-                  >
-
-                  <a
-                    href="SanPham.html?brand=techno&page=1"
-                    class="brand-link"
-                    id="TECH NO"
-                    ><li>TECH NO</li></a
-                  >
-                </ul>
-              </div>
+          <div class="d-flex align-items-center">
+            <button class="btn btn-outline-light me-2 catogory-product">
+              <a href="SanPham.html?brand=null&page=1"><i class="bi bi-card-list"></i> <span>Sản phẩm</span></a>
+              
             </div>
-
-            <form onsubmit="searchProduct(event)">
-              <div class="search-box">
-                <input
-                  type="text"
-                  name="search-box"
-                  id="search-box"
-                  placeholder="Bạn muốn tìm gì ?"
-                  size="38"
-                  autocomplete="off"
-                />
-                <input type="submit" value="Tìm kiếm" />
-              </div>
-            </form>
-
-            <div class="catogory catogory-history">
-              <i class="fa-solid fa-clock-rotate-left"></i>
-              <span class="text-catogory">Lịch sử mua hàng</span>
-            </div>
-
-            <div class="catogory catogory-cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="text-catogory">Giỏ hàng</span>
-            </div>
-
-            <div class="catogory catogory-user">
-              <i class="fa-solid fa-user"></i>
-              <span class="text-catogory">User</span>
-            </div>
+            </button>
+            <button class="btn btn-outline-light me-2" id="historybutton">
+              <i class="bi bi-clock-history"></i> <span
+              >Lịch sử mua hàng</span
+               >
+            </button>
+            <button class="btn btn-outline-light me-2" id="cart-poiter">
+              <i class="bi bi-cart"></i> <span>Giỏ hàng</span>
+            </button>
+            <button id="userBtn"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal">
+              <i class="bi bi-person"></i> <span>User</span>
+            </button>
           </div>
         </div>
-      </div>
+      </nav>
     </header>
 
     <main>
@@ -141,71 +93,50 @@
     </main>
 
     <footer>
-      <div class="body-footer">
-        <div class="main-content">
-          <div class="address-shop">
-            <div class="address">
-              <img src="./asset/img/map.png" alt="Địa chỉ cửa hàng" />
-            </div>
-            <div class="info-shop">
-              <div class="connect location">
-                <div class="head">
-                  <i class="fa-solid fa-location-dot"></i>
-                  <h4>Địa chỉ</h4>
-                </div>
-                <p>273 An Dương Vương, P.03, Q.05, TP Hồ Chí Minh</p>
-              </div>
-              <div class="connect phone">
-                <div class="head">
-                  <i class="fa-solid fa-phone"></i>
-                  <h4>Hotline</h4>
-                </div>
-                <p>090.123.4567 (8:00 - 22:00)</p>
-              </div>
-              <div class="connect email">
-                <div class="head">
-                  <i class="fa-solid fa-envelope"></i>
-                  <h4>Email</h4>
-                </div>
-                <p>group55@gmail.com</p>
-              </div>
-            </div>
-          </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Thông Tin Cửa Hàng</h3>
+          <p>Cửa Hàng GROUP 55</p>
+          <p>273 Đ. An Dương Vương, P. 03, Q. 05, Tp. Hồ Chí Minh</p>
+          <p>Hotline: 0912.345.678</p>
         </div>
-        <div class="return-head">
-          <a href="#"><i class="fa-solid fa-angle-up"></i></a>
+
+        <div class="footer-section">
+          <h3>Chính Sách</h3>
+          <ul>
+            <li>Quy chế hoạt động</li>
+            <li>Chính sách Bảo hành</li>
+            <li>Liên hệ hợp tác kinh doanh</li>
+            <li>Đơn Doanh nghiệp</li>
+          </ul>
         </div>
-        <div class="policy-shop">
-          <div class="info">
-            <h4>Thông tin cửa hàng</h4>
-            <p>Cửa hàng GROUP 55</p>
-            <p>273 An Dương Vương P3 Q5 TPHCM</p>
-            Hotline: 090.123.4567
-          </div>
-          <div class="policy">
-            <h4>Chính sách</h4>
-            <p>Quy chế hoạt động</p>
-            <p>Chính sách bảo hành</p>
-            <p>Liên hệ hợp tác kinh doanh</p>
-            <p>Đơn doanh nghiệp</p>
-          </div>
-          <div class="guarantee">
-            <h4>Bảo hành</h4>
-            <p>Tra thông tin bảo hành</p>
-            <p>Trung tâm bảo hành chính hãng</p>
-            <p>Quy định về việc sao lưu dữ liệu</p>
-            <p>Dịch vụ bảo hành điện thoại</p>
-          </div>
-          <div class="hotline">
-            <h4>Hotline</h4>
-            <p>Gọi mua hàng: 123455667890</p>
-            <p>Gọi khiếu nại: 1122334455</p>
-            <p>Gọi bảo hành: 0987654321</p>
-            <p>(8:00 - 22:00)</p>
-          </div>
+
+        <div class="footer-section">
+          <h3>Bảo Hành</h3>
+          <ul>
+            <li>Tra thông tin bảo hành</li>
+            <li>Trung tâm bảo hành chính hãng</li>
+            <li>Quy định về việc sao lưu dữ liệu</li>
+            <li>Dịch vụ bảo hành điện thoại</li>
+          </ul>
         </div>
-        <div class="source">2024 | Copyright by <span>GROUP 55</span></div>
+
+        <div class="footer-section">
+          <h3>Hotline</h3>
+          <ul>
+            <li>Gọi mua hàng: 0912.345.678</li>
+            <li>Gọi khiếu nại: 0923.456.789</li>
+            <li>Gọi bảo hành: 0934.567.891</li>
+            <li>(08:00 - 22:00)</li>
+          </ul>
+        </div>
       </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 | Copyright by <span>GROUP 55</span></p>
+      </div>
+
+      <button id="scrollToTop" onclick="scrollToTop()">&#8679;</button>
     </footer>
 
     <script>
@@ -219,17 +150,7 @@
           currency: "VND",
         });
       }
-
-      // Hàm tạo các ngôi sao đánh giá
-      function createRatingStars(rating) {
-        let stars = "";
-        for (let i = 0; i < 5; i++) {
-          stars += `<i class="fa-solid fa-star${
-            i < rating ? "" : "-half-stroke"
-          }"></i>`;
-        }
-        return stars;
-      }
+      let loginStatus = JSON.parse(localStorage.getItem("loginStatus")) || false;
 
       function showProductDetails() {
         const urlParams = new URLSearchParams(window.location.search);
@@ -247,18 +168,7 @@
           document.querySelector(".product-detail").innerHTML = `
             <div class="box-detail">
               <div class="img-transfer">
-                <div class="rating-favorite">
-                  <div class="rating">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                  <div class="heart">
-                    <i class="fa-regular fa-heart"></i>
-                  </div>
-                </div>
+              
                 <div class="img-detail">
                   <div class="main-img">
                     <img src="${product.image}" alt="${
@@ -285,8 +195,8 @@
                 <hr />
                 <p class="desc">${product.desc}</p>
                 <hr />
-                <button id="buynow">Mua ngay</button>
-                <button id="addtocart">Thêm vào giỏ hàng</button>
+                <button id="buyNowButton" onclick="navigate('buynow' , event,${productId})">Mua ngay</button>
+                <button id="addToCartButton">Thêm vào giỏ hàng</button>
               </div>
             </div>
             <div class="specifications">
@@ -323,6 +233,53 @@
               </div>
             </div>
           `;
+          document
+            .getElementById("addToCartButton")
+            .addEventListener("click", function () {
+              let currentUser = JSON.parse(localStorage.getItem("currentUser"))
+              if(currentUser){
+                let cart = JSON.parse(localStorage.getItem(`cart_${currentUser.userName}`)) || [];
+              // Lấy sản phẩm liên quan đến nút "Thêm vào giỏ hàng"
+              const productDiv = this.closest(".product"); // Tìm div cha chứa sản phẩm
+
+              // Lấy thông tin từ sản phẩm
+              const mainImage = document.querySelector("#displayMainImg").src; // Lấy URL của hình ảnh chính
+              const productName =
+                document.querySelector(".product-detail h3").textContent; // Lấy tên sản phẩm
+              const productPrice = document.querySelector(
+                ".product-detail .price"
+              ).textContent; // Lấy giá sản phẩm
+
+              // console.log(mainImage)
+              // console.log(productName)
+              // console.log(productPrice)
+              // Tạo đối tượng sản phẩm và thêm vào giỏ hàng
+              const product = {
+                id: productId,
+                image: mainImage,
+                name: productName,
+                price: productPrice,
+              };
+              // console.log(product)
+              const productExists = cart.some(
+                (item) => item.name === product.name
+              );
+
+              if (productExists) {
+                showCustomAlert("Đã có sản phẩm trong cửa hàng");
+              } else {
+                // Nếu sản phẩm chưa có, thêm vào giỏ hàng
+                cart.push(product);
+                localStorage.setItem(`cart_${currentUser.userName}`, JSON.stringify(cart));
+                // Hiển thị thông báo hoặc cập nhật giao diện
+                showCustomAlert(
+                  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"  style="transform: translateY(5px);"><circle cx="12" cy="12" r="10" stroke="#03af4b" stroke-width="3" top=10px fill="white"/><path d="M9 16.2l-4.6-4.6 1.4-1.4 3.2 3.2 7.6-7.6 1.4 1.4z" fill="green" stroke-width="100"/></svg> Thêm vào giỏ thành công'
+                );
+              }
+              }else{
+                showCustomAlert("Vui lòng đăng nhập trước khi mua hàng !");
+              }
+            });
         }
       }
 
@@ -355,6 +312,96 @@
           window.location.href = `SanPham.html?search=${encodeURIComponent(
             query
           )}`;
+        }
+      }
+
+      document
+        .getElementById("cart-poiter")
+        .addEventListener("click", function () {
+          window.location.href = "Nhom55.html";
+        });
+
+        function showCustomAlert(message) {
+        var alertElement = document.getElementById("customAlert");
+        var alertMessage = document.getElementById("alertMessage");
+        alertMessage.innerHTML = message;
+        alertElement.classList.add("show"); // Hiển thị thông báo
+
+        // Tự động đóng thông báo khi nhấn nút "X"
+        var closeButton = document.getElementById("closeAlert");
+        closeButton.onclick = function () {
+          alertElement.classList.remove("show");
+        };
+        setTimeout(function () {
+          alertElement.classList.remove("show");
+        }, 2000); // 2000ms = 2 giây
+      }
+
+      document
+        .getElementById("historybutton")
+        .addEventListener("click", function () {
+          window.location.href = `HistoryCart.html`;
+        });
+
+      function navigate(buttonId, event, productId) {
+        if(loginStatus === true){
+          // Tìm phần tử chứa sản phẩm gần nhất
+        const productDiv = event.target.closest(".box-detail");
+        console.log(event.target)
+        console.log(productDiv)
+        // Kiểm tra phần tử tồn tại
+        if (!productDiv) {
+          console.error("Không tìm thấy div chứa sản phẩm.");
+          return;
+        }
+
+        // Lấy thông tin từ sản phẩm
+        const mainImageElement = productDiv.querySelector("#displayMainImg");
+        const productNameElement = productDiv.querySelector(".product-detail h3");
+        const productPriceElement = productDiv.querySelector(".product-detail .price");
+
+        if (!mainImageElement || !productNameElement || !productPriceElement) {
+            console.error("Không tìm thấy thông tin sản phẩm.");
+            return;
+        }
+
+        const mainImage = mainImageElement.src; // URL của hình ảnh chính
+        const productName = productNameElement.textContent; // Tên sản phẩm
+        const productPrice = productPriceElement.textContent; // Giá sản phẩm
+
+        // Tạo đối tượng sản phẩm
+        const product = {
+            id: productId,
+            image: mainImage,
+            name: productName,
+            price: productPrice
+        };
+
+        // In ra console để kiểm tra
+        console.log(product);
+
+        localStorage.setItem("product", JSON.stringify(product));
+        window.location.href = `Nhom55.html?button=${buttonId}`;
+        }
+        else{
+          showCustomAlert("Vui lòng đăng nhập trước khi mua hàng !");
+        }
+      }
+
+      // thêm 2/12/2024: file detail.html
+      document.getElementById("userBtn").addEventListener("click", () => {
+        window.location.href = "account.html";
+      });
+
+      if (loginStatus) {
+        // Lấy thông tin người dùng hiện tại từ localStorage
+        let currentuser = JSON.parse(localStorage.getItem("currentUser"));
+
+        // Kiểm tra xem currentuser có tồn tại và có thuộc tính userName không
+        if (currentuser && currentuser.userName) {
+          // Cập nhật nội dung của nút userBtn
+          const userBtn = document.getElementById("userBtn");
+          userBtn.innerHTML = `<i class="bi bi-person"></i> <span>${currentuser.userName}</span>`;
         }
       }
     </script>

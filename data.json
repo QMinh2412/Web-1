@@ -1,0 +1,112 @@
+[
+    {
+        "userName": "Nguyễn Văn A",
+        "password": "123",
+        "email": "nguyenvana@gmail.com",
+        "loaiKhachHang": "Khách hàng",
+        "soLuongGiaoDich": 1,
+        "tongTien": 12000000,
+        "ngayTao": "2023-01-10",
+        "status": "active",
+        "accountType": "user"
+    },
+    {
+        "userName": "Trần Thị B",
+        "password": "123",
+        "email": "tranthib@gmail.com",
+        "loaiKhachHang": "Khách hàng",
+        "soLuongGiaoDich": 1,
+        "tongTien": 5750000,
+        "ngayTao": "2023-01-15",
+        "status": "active",
+        "accountType": "user"
+    },
+    {
+        "userName": "lekien",
+        "password": "123",
+        "email": "kienlt@gmail.com",
+        "loaiKhachHang": "Khách hàng",
+        "soLuongGiaoDich": 1,
+        "tongTien": 30400000,
+        "ngayTao": "2023-02-20",
+        "status": "lock",
+        "accountType": "user"
+    },
+    {
+        "userName": "Phạm Văn C",
+        "password": "123",
+        "email": "phamvanc@gmail.com",
+        "loaiKhachHang": "Khách hàng",
+        "soLuongGiaoDich": 1,
+        "tongTien": 23583000,
+        "ngayTao": "2023-03-05",
+        "status": "active",
+        "accountType": "user"
+    },
+    {
+        "userName": "Đỗ Thị D",
+        "password": "123",
+        "email": "dothid@gmail.com",
+        "loaiKhachHang": "Khách hàng",
+        "soLuongGiaoDich": 1,
+        "tongTien": 6100000,
+        "ngayTao": "2023-04-10",
+        "status": "active",
+        "accountType": "user"
+    },
+    {
+        "userName": "Nguyễn Văn E",
+        "password": "123",
+        "email": "nguyenvane@gmail.com",
+        "loaiKhachHang": "Khách hàng",
+        "soLuongGiaoDich": 1,
+        "tongTien": 18000000,
+        "ngayTao": "2023-05-12",
+        "status": "lock",
+        "accountType": "user"
+    },
+    {
+        "userName": "Trần Văn F",
+        "password": "123",
+        "email": "tranvanf@gmail.com",
+        "loaiKhachHang": "Khách hàng",
+        "soLuongGiaoDich": 1,
+        "tongTien": 20300000,
+        "ngayTao": "2023-06-18",
+        "status": "active",
+        "accountType": "user"
+    },
+    {
+        "userName": "Lê Văn G",
+        "password": "123",
+        "email": "levang@gmail.com",
+        "loaiKhachHang": "Khách hàng",
+        "soLuongGiaoDich": 1,
+        "tongTien": 15200000,
+        "ngayTao": "2023-07-22",
+        "status": "active",
+        "accountType": "user"
+    },
+    {
+        "userName": "Phạm Thị H",
+        "password": "123",
+        "email": "phamthih@gmail.com",
+        "loaiKhachHang": "Khách hàng",
+        "soLuongGiaoDich": 1,
+        "tongTien": 12500000,
+        "ngayTao": "2023-08-25",
+        "status": "lock",
+        "accountType": "user"
+    },
+    {
+        "userName": "Đỗ Văn I",
+        "password": "123",
+        "email": "dovani@gmail.com",
+        "loaiKhachHang": "Khách hàng",
+        "soLuongGiaoDich": 1,
+        "tongTien": 17800000,
+        "ngayTao": "2023-09-28",
+        "status": "active",
+        "accountType": "user"
+    }
+]

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "iPhone 16 Pro Max 256GB | Chính hãng VN/A",
-    "brandId": "iphone",
+    "brandId": "apple",
     "image": "asset/img/ip1-1.webp",
     "thumnailList": [
       { "thumnail": "asset/img/ip1-1.webp", "alt": "Ảnh 1" },
@@ -19,14 +19,12 @@
     "os": "iOS 18",
     "price": 34190000,
     "storage": "256GB",
-    "promotion": "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!"
   },
   {
     "id": 2,
     "name": "iPhone 15 Pro Max 256GB | Chính hãng VN/A",
-    "brandId": "iphone",
+    "brandId": "apple",
     "image": "asset/img/ip2-1.webp",
     "thumnailList": [
       { "thumnail": "asset/img/ip2-1.webp", "alt": "Ảnh 1" },
@@ -43,14 +41,12 @@
     "os": "iOS 18",
     "price": 29490000,
     "storage": "256GB",
-    "promotion": "Mua 1 tặng 1: Mua một chiếc điện thoại, tặng một phụ kiện đi kèm!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Mua 1 tặng 1: Mua một chiếc điện thoại, tặng một phụ kiện đi kèm!"
   },
   {
     "id": 3,
     "name": "iPhone 16 128GB | Chính hãng VN/A",
-    "brandId": "iphone",
+    "brandId": "apple",
     "image": "asset/img/ip3-1.webp",
     "thumnailList": [
       { "thumnail": "asset/img/ip3-1.webp", "alt": "Ảnh 1" },
@@ -67,14 +63,12 @@
     "os": "iOS 18",
     "price": 21990000,
     "storage": "128GB",
-    "promotion": "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!"
   },
   {
     "id": 4,
     "name": "iPhone 15 128GB | Chính hãng VN/A",
-    "brandId": "iphone",
+    "brandId": "apple",
     "image": "asset/img/ip4-1.webp",
     "thumnailList": [
       { "thumnail": "asset/img/ip4-1.webp", "alt": "Ảnh 1" },
@@ -91,14 +85,12 @@
     "os": "iOS 17",
     "price": 19690000,
     "storage": "128GB",
-    "promotion": "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!"
   },
   {
     "id": 5,
     "name": "iPhone 14 Pro Max 128GB | Chính hãng VN/A",
-    "brandId": "iphone",
+    "brandId": "apple",
     "image": "asset/img/ip5-1.webp",
     "thumnailList": [
       { "thumnail": "asset/img/ip5-1.webp", "alt": "Ảnh 1" },
@@ -115,14 +107,12 @@
     "os": "iOS 16",
     "price": 25590000,
     "storage": "128GB",
-    "promotion": "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!"
   },
   {
     "id": 6,
     "name": "iPhone 11 64GB | Chính hãng VN/A",
-    "brandId": "iphone",
+    "brandId": "apple",
     "image": "asset/img/ip6-1.webp",
     "thumnailList": [
       { "thumnail": "asset/img/ip6-1.webp", "alt": "Ảnh 1" },
@@ -139,14 +129,12 @@
     "os": "iOS 13 hoặc cao hơn",
     "price": 8990000,
     "storage": "64GB",
-    "promotion": "Chương trình đổi cũ lấy mới: Đổi điện thoại cũ, nhận thêm ưu đãi lên tới 1 triệu đồng!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Chương trình đổi cũ lấy mới: Đổi điện thoại cũ, nhận thêm ưu đãi lên tới 1 triệu đồng!"
   },
   {
     "id": 7,
-    "name": "Phone 12 64GB | Chính hãng VN/A",
-    "brandId": "iphone",
+    "name": "iPhone 12 64GB | Chính hãng VN/A",
+    "brandId": "apple",
     "image": "asset/img/ip7-1.webp",
     "thumnailList": [
       { "thumnail": "asset/img/ip7-1.webp", "alt": "Ảnh 1" },
@@ -163,14 +151,12 @@
     "os": "iOS 14.1",
     "price": 10990000,
     "storage": "64GB",
-    "promotion": "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!"
   },
   {
     "id": 8,
     "name": "iPhone 13 Pro Max 256GB | Chính hãng VN/A",
-    "brandId": "iphone",
+    "brandId": "apple",
     "image": "asset/img/ip8-1.jpg",
     "thumnailList": [
       { "thumnail": "asset/img/ip8-1.jpg", "alt": "Ảnh 1" },
@@ -187,14 +173,12 @@
     "os": "iOS 15",
     "price": 23990000,
     "storage": "256GB",
-    "promotion": "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!"
   },
   {
     "id": 9,
     "name": "iPhone 12 64GB | Chính hãng VN/A",
-    "brandId": "iphone",
+    "brandId": "apple",
     "image": "asset/img/ip9-1.jpg",
     "thumnailList": [
       { "thumnail": "asset/img/ip9-1.jpg", "alt": "Ảnh 1" },
@@ -211,14 +195,12 @@
     "os": "iOS 14.1",
     "price": 10990000,
     "storage": "64GB",
-    "promotion": "Mua 1 tặng 1: Mua một chiếc điện thoại, tặng một phụ kiện đi kèm!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Mua 1 tặng 1: Mua một chiếc điện thoại, tặng một phụ kiện đi kèm!"
   },
   {
     "id": 10,
     "name": " iPhone 14 Plus 128GB",
-    "brandId": "iphone",
+    "brandId": "apple",
     "image": "asset/img/ip10-1.webp",
     "thumnailList": [
       { "thumnail": "asset/img/ip10-1.webp", "alt": "Ảnh 1" },
@@ -235,14 +217,12 @@
     "os": "iOS 17",
     "price": 20090000,
     "storage": "128GB",
-    "promotion": "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!"
   },
   {
     "id": 11,
     "name": "iPhone 16 Pro Max 256GB",
-    "brandId": "iphone",
+    "brandId": "apple",
     "image": "asset/img/ip11-1.webp",
     "thumnailList": [
       { "thumnail": "asset/img/ip11-1.webp", "alt": "Ảnh 1" },
@@ -259,9 +239,7 @@
     "os": "iOS 18",
     "price": 34490000,
     "storage": "256GB",
-    "promotion": "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!"
   },
   {
     "id": 12,
@@ -283,9 +261,7 @@
     "os": "Android 14, One UI 6.1",
     "price": 27990000,
     "storage": "256GB",
-    "promotion": "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!"
   },
   {
     "id": 13,
@@ -307,9 +283,7 @@
     "os": "Android 14",
     "price": 16990000,
     "storage": "128GB",
-    "promotion": "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!"
   },
   {
     "id": 14,
@@ -331,9 +305,7 @@
     "os": "Android 14",
     "price": 10190000,
     "storage": "256GB",
-    "promotion": "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!"
   },
   {
     "id": 15,
@@ -355,9 +327,7 @@
     "os": "Android",
     "price": 23490000,
     "storage": "512GB",
-    "promotion": "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!"
   },
   {
     "id": 16,
@@ -379,9 +349,7 @@
     "os": "iOS 18",
     "price": 26990000,
     "storage": "256GB",
-    "promotion": "Mua 1 tặng 1: Mua một chiếc điện thoại, tặng một phụ kiện đi kèm!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Mua 1 tặng 1: Mua một chiếc điện thoại, tặng một phụ kiện đi kèm!"
   },
   {
     "id": 17,
@@ -390,7 +358,7 @@
     "image": "asset/img/ss6-1.webp",
     "thumnailList": [
       { "thumnail": "asset/img/ss6-1.webp", "alt": "Ảnh 1" },
-      { "thumnail": "asset/img/ss6-2.webp", "alt": "Ảnh 2" },
+      { "thumnail": "asset/img/ss6-2.jpg", "alt": "Ảnh 2" },
       { "thumnail": "asset/img/ss6-3.webp", "alt": "Ảnh 3" }
     ],
     "desc": "Thoải mái lựa chọn màu sắc yêu thích, phù hợp với phong cách của bạn. Đa dạng màu sắc thời thượng, từ cổ điển đến hiện đại. Tùy chỉnh sản phẩm theo sở thích cá nhân, tạo nên dấu ấn riêng. Lựa chọn phụ kiện đi kèm theo phong cách của bạn.",
@@ -403,9 +371,7 @@
     "os": "Android 13",
     "price": 15290000,
     "storage": "512GB",
-    "promotion": "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!"
   },
   {
     "id": 18,
@@ -427,9 +393,7 @@
     "os": "Android",
     "price": 3190000,
     "storage": "128GB",
-    "promotion": "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!"
   },
   {
     "id": 19,
@@ -451,9 +415,7 @@
     "os": "Android",
     "price": 6090000,
     "storage": "128GB",
-    "promotion": "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!"
   },
   {
     "id": 20,
@@ -475,9 +437,7 @@
     "os": "Android 13",
     "price": 29990000,
     "storage": "512GB",
-    "promotion": "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!"
   },
   {
     "id": 21,
@@ -499,9 +459,7 @@
     "os": "Android 13",
     "price": 27990000,
     "storage": "256GB",
-    "promotion": "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!"
   },
   {
     "id": 22,
@@ -523,9 +481,7 @@
     "os": "Android 10, One UI 2.1",
     "price": 32990000,
     "storage": "256GB",
-    "promotion": "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!"
   },
   {
     "id": 23,
@@ -547,9 +503,7 @@
     "os": "Android",
     "price": 4490000,
     "storage": "128GB",
-    "promotion": "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!",
-    "rating": 5,
-    "isFavorite": false
+    "promotion": "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!"
   },
   {
     "id": 24,
@@ -571,9 +525,7 @@
     "os": "Android 13",
     "price": 9290000,
     "storage": "256GB",
-    "promotion": "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!"
   },
   {
     "id": 25,
@@ -595,9 +547,7 @@
     "os": "Android",
     "price": 3190000,
     "storage": "128GB",
-    "promotion": "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!"
   },
   {
     "id": 26,
@@ -619,8 +569,6 @@
     "os": "Android",
     "price": 13990000,
     "storage": "512GB",
-    "promotion": "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!",
-    "rating": 5,
-    "isFavorite": true
+    "promotion": "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!"
   }
 ]

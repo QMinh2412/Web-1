@@ -2,7 +2,7 @@ let listProducts = [
   {
     id: 1,
     name: "iPhone 16 Pro Max 256GB | Chính hãng VN/A",
-    brandId: "iphone",
+    brandId: "apple",
     image: "asset/img/ip1-1.webp",
     thumnailList: [
       { thumnail: "asset/img/ip1-1.webp", alt: "Ảnh 1" },
@@ -21,13 +21,11 @@ let listProducts = [
     price: 34190000,
     storage: "256GB",
     promotion: "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 2,
     name: "iPhone 15 Pro Max 256GB | Chính hãng VN/A",
-    brandId: "iphone",
+    brandId: "apple",
     image: "asset/img/ip2-1.webp",
     thumnailList: [
       { thumnail: "asset/img/ip2-1.webp", alt: "Ảnh 1" },
@@ -47,13 +45,11 @@ let listProducts = [
     storage: "256GB",
     promotion:
       "Mua 1 tặng 1: Mua một chiếc điện thoại, tặng một phụ kiện đi kèm!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 3,
     name: "iPhone 16 128GB | Chính hãng VN/A",
-    brandId: "iphone",
+    brandId: "apple",
     image: "asset/img/ip3-1.webp",
     thumnailList: [
       { thumnail: "asset/img/ip3-1.webp", alt: "Ảnh 1" },
@@ -73,13 +69,11 @@ let listProducts = [
     storage: "128GB",
     promotion:
       "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 4,
     name: "iPhone 15 128GB | Chính hãng VN/A",
-    brandId: "iphone",
+    brandId: "apple",
     image: "asset/img/ip4-1.webp",
     thumnailList: [
       { thumnail: "asset/img/ip4-1.webp", alt: "Ảnh 1" },
@@ -98,13 +92,11 @@ let listProducts = [
     storage: "128GB",
     promotion:
       "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 5,
     name: "iPhone 14 Pro Max 128GB | Chính hãng VN/A",
-    brandId: "iphone",
+    brandId: "apple",
     image: "asset/img/ip5-1.webp",
     thumnailList: [
       { thumnail: "asset/img/ip5-1.webp", alt: "Ảnh 1" },
@@ -124,13 +116,11 @@ let listProducts = [
     storage: "128GB",
     promotion:
       "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 6,
     name: "iPhone 11 64GB | Chính hãng VN/A",
-    brandId: "iphone",
+    brandId: "apple",
     image: "asset/img/ip6-1.webp",
     thumnailList: [
       { thumnail: "asset/img/ip6-1.webp", alt: "Ảnh 1" },
@@ -150,13 +140,11 @@ let listProducts = [
     storage: "64GB",
     promotion:
       "Chương trình đổi cũ lấy mới: Đổi điện thoại cũ, nhận thêm ưu đãi lên tới 1 triệu đồng!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 7,
     name: "iPhone 12 64GB | Chính hãng VN/A",
-    brandId: "iphone",
+    brandId: "apple",
     image: "asset/img/ip7-1.webp",
     thumnailList: [
       { thumnail: "asset/img/ip7-1.webp", alt: "Ảnh 1" },
@@ -176,13 +164,11 @@ let listProducts = [
     price: 10990000,
     storage: "64GB",
     promotion: "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 8,
     name: "iPhone 13 Pro Max 256GB | Chính hãng VN/A",
-    brandId: "iphone",
+    brandId: "apple",
     image: "asset/img/ip8-1.jpg",
     thumnailList: [
       { thumnail: "asset/img/ip8-1.jpg", alt: "Ảnh 1" },
@@ -201,13 +187,11 @@ let listProducts = [
     price: 23990000,
     storage: "256GB",
     promotion: "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 9,
     name: "iPhone 12 64GB | Chính hãng VN/A",
-    brandId: "iphone",
+    brandId: "apple",
     image: "asset/img/ip9-1.jpg",
     thumnailList: [
       { thumnail: "asset/img/ip9-1.jpg", alt: "Ảnh 1" },
@@ -228,13 +212,11 @@ let listProducts = [
     storage: "64GB",
     promotion:
       "Mua 1 tặng 1: Mua một chiếc điện thoại, tặng một phụ kiện đi kèm!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 10,
     name: " iPhone 14 Plus 128GB",
-    brandId: "iphone",
+    brandId: "apple",
     image: "asset/img/ip10-1.webp",
     thumnailList: [
       { thumnail: "asset/img/ip10-1.webp", alt: "Ảnh 1" },
@@ -253,13 +235,11 @@ let listProducts = [
     storage: "128GB",
     promotion:
       "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 11,
     name: "iPhone 16 Pro Max 256GB",
-    brandId: "iphone",
+    brandId: "apple",
     image: "asset/img/ip11-1.webp",
     thumnailList: [
       { thumnail: "asset/img/ip11-1.webp", alt: "Ảnh 1" },
@@ -278,8 +258,6 @@ let listProducts = [
     storage: "256GB",
     promotion:
       "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 12,
@@ -304,8 +282,6 @@ let listProducts = [
     storage: "256GB",
     promotion:
       "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 13,
@@ -329,8 +305,6 @@ let listProducts = [
     storage: "128GB",
     promotion:
       "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 14,
@@ -355,8 +329,6 @@ let listProducts = [
     storage: "256GB",
     promotion:
       "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 15,
@@ -381,8 +353,6 @@ let listProducts = [
     storage: "512GB",
     promotion:
       "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 16,
@@ -406,8 +376,6 @@ let listProducts = [
     storage: "256GB",
     promotion:
       "Mua 1 tặng 1: Mua một chiếc điện thoại, tặng một phụ kiện đi kèm!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 17,
@@ -416,7 +384,7 @@ let listProducts = [
     image: "asset/img/ss6-1.webp",
     thumnailList: [
       { thumnail: "asset/img/ss6-1.webp", alt: "Ảnh 1" },
-      { thumnail: "asset/img/ss6-2.webp", alt: "Ảnh 2" },
+      { thumnail: "asset/img/ss6-2.jpg", alt: "Ảnh 2" },
       { thumnail: "asset/img/ss6-3.webp", alt: "Ảnh 3" },
     ],
     desc: "Thoải mái lựa chọn màu sắc yêu thích, phù hợp với phong cách của bạn. Đa dạng màu sắc thời thượng, từ cổ điển đến hiện đại. Tùy chỉnh sản phẩm theo sở thích cá nhân, tạo nên dấu ấn riêng. Lựa chọn phụ kiện đi kèm theo phong cách của bạn.",
@@ -431,8 +399,6 @@ let listProducts = [
     price: 15290000,
     storage: "512GB",
     promotion: "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 18,
@@ -455,8 +421,6 @@ let listProducts = [
     price: 3190000,
     storage: "128GB",
     promotion: "Giá ưu đãi đặc biệt: Giảm ngay 20% cho đơn hàng đầu tiên!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 19,
@@ -481,8 +445,6 @@ let listProducts = [
     storage: "128GB",
     promotion:
       "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 20,
@@ -507,8 +469,6 @@ let listProducts = [
     storage: "512GB",
     promotion:
       "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 21,
@@ -533,8 +493,6 @@ let listProducts = [
     storage: "256GB",
     promotion:
       "Quà tặng hấp dẫn: Mua điện thoại, nhận ngay tai nghe không dây miễn phí!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 22,
@@ -559,8 +517,6 @@ let listProducts = [
     storage: "256GB",
     promotion:
       "Trả góp 0% lãi suất: Trả góp linh hoạt, 0% lãi suất trong 6 tháng!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 23,
@@ -584,8 +540,6 @@ let listProducts = [
     storage: "128GB",
     promotion:
       "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 24,
@@ -610,8 +564,6 @@ let listProducts = [
     storage: "256GB",
     promotion:
       "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 25,
@@ -635,8 +587,6 @@ let listProducts = [
     storage: "128GB",
     promotion:
       "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!",
-    rating: 5,
-    isFavorite: true,
   },
   {
     id: 26,
@@ -662,11 +612,45 @@ let listProducts = [
     storage: "512GB",
     promotion:
       "Bảo hành mở rộng: Bảo hành 2 năm cho mọi sản phẩm, yên tâm sử dụng!",
-    rating: 5,
-    isFavorite: true,
   },
 ];
 
+// thêm 2/12/2024: file sanpham.js =============================================
+let dataDanhMuc;
+// = [
+//   { id: "1", name: "apple", soluong: 5 },
+//   { id: "2", name: "samsung", soluong: 2 },
+//   { id: "3", name: "xiaomi", soluong: 8 },
+//   { id: "4", name: "huawei", soluong: 7 },
+//   { id: "5", name: "nokia", soluong: 8 },
+//   { id: "6", name: "vsmart", soluong: 9 },
+//   { id: "7", name: "oppo", soluong: 5 },
+//   { id: "8", name: "realme", soluong: 3 },
+// ];
+
+// localStorage.setItem("DANHMUC_DATA", JSON.stringify(dataDanhMuc));
+
+dataDanhMuc = JSON.parse(localStorage.getItem("DANHMUC_DATA"));
+console.log(dataDanhMuc);
+
+// hàm hiện thị danh mục các sản phẩm
+function displayCatogoryProduct() {
+  var s = "";
+  for (let obj of dataDanhMuc)
+    s += `
+    <a
+                href="SanPham.html?brand=${obj.name}&page=1"
+                class="brand-link"
+                id="${obj.name}"
+                ><li>${obj.name.toUpperCase()}</li></a
+              >
+  `;
+  console.log("Đang chạy trong hàm hiện thị danh mục");
+  document.querySelector(".hover-branch-list ul").innerHTML = s;
+}
+
+displayCatogoryProduct();
+// ===================================================================================================
 if (listProducts.length <= 0) {
   alert("danh sach trong");
 } else {
@@ -677,12 +661,41 @@ if (listProducts.length <= 0) {
 // lấy dữ liệu tù local storage
 listProducts = JSON.parse(localStorage.getItem("data"));
 
+// thêm 2/12/2024: file sanpham.js
+document.getElementById("userBtn").addEventListener("click", () => {
+  window.location.href = "account.html";
+});
+
+let loginStatus = JSON.parse(localStorage.getItem("loginStatus")) || false;
+if (loginStatus) {
+  // Lấy thông tin người dùng hiện tại từ localStorage
+  let currentuser = JSON.parse(localStorage.getItem("currentUser"));
+
+  // Kiểm tra xem currentuser có tồn tại và có thuộc tính userName không
+  if (currentuser && currentuser.userName) {
+    // Cập nhật nội dung của nút userBtn
+    const userBtn = document.getElementById("userBtn");
+    userBtn.innerHTML = `<i class="bi bi-person"></i> <span>${currentuser.userName}</span>`;
+  }
+}
+
 // ======================== KHAI BÁO BIẾN ==============================
 let productsByBrand = [];
 let originalProductsByBrand = []; // Mảng tạm lưu danh sách sản phẩm theo hãng ban đầu
 let productPerPage;
 let currentPage = 1; // Trang hiện tại
 
+// ====================== HÀM IN SẢN PHẨM THEO HÃNG ===========================
+const urlParams = new URLSearchParams(window.location.search);
+const brandProduct = urlParams.get("brand");
+const beginPage = urlParams.get("page");
+let found = urlParams.get("search");
+
+console.log("tu khoa vua tim ben index: ", found);
+console.log("brand: ", brandProduct);
+console.log("kiểu của br and: ", typeof brandProduct);
+
+// hàm kiểm tra kích thước trang và cho số sản phẩm trên trang phù hợp
 function handleResponsiveChange() {
   const width = window.innerWidth;
 
@@ -697,9 +710,11 @@ function handleResponsiveChange() {
 
   console.log(`Width: ${width}px, Số sản phẩm/trang: ${productPerPage}`);
 
-  // Cập nhật giao diện sản phẩm
-  currentPage = 1; // Reset về trang đầu
-  displayProductPerPage(currentPage); // Hiển thị sản phẩm với số lượng mới
+  if (!found) {
+    // Cập nhật giao diện sản phẩm
+    currentPage = 1; // Reset về trang đầu
+    displayProductPerPage(currentPage); // Hiển thị sản phẩm với số lượng mới
+  }
 }
 
 // Gọi hàm ngay khi trang tải
@@ -708,21 +723,11 @@ handleResponsiveChange();
 // Lắng nghe sự kiện thay đổi kích thước màn hình
 window.addEventListener("resize", handleResponsiveChange);
 
-// ====================== HÀM IN SẢN PHẨM THEO HÃNG ===========================
-const urlParams = new URLSearchParams(window.location.search);
-const brandProduct = urlParams.get("brand");
-const beginPage = urlParams.get("page");
-const found = urlParams.get("search");
-console.log("tu khoa vua tim ben index: ", found);
-
-console.log("brand: ", brandProduct);
-console.log("kiểu của brand: ", typeof brandProduct);
-
 function displayListByBrand(brand) {
   productsByBrand = [];
 
   // Kiểm tra nếu brand là null
-  if (brand === "null") {
+  if (brand === "null" || brand === null) {
     console.log("đang chạy trong brand === null");
     productsByBrand = listProducts; // Nếu brand là null, lấy tất cả sản phẩm
     originalProductsByBrand = productsByBrand; // Lưu vào mảng tạm
@@ -746,11 +751,12 @@ function displayListByBrand(brand) {
   displayProductPerPage(currentPage);
 }
 
-displayListByBrand(brandProduct);
-// console.log(productsByBrand);
-
+// nếu có sản phẩm được tìm kiếm sẽ ưu tiên hiện sản phẩm đc tìm
 if (found) {
   searchProduct();
+} else {
+  displayListByBrand(brandProduct);
+  // console.log(productsByBrand);
 }
 
 // ======================== HÀM HIỆN THỊ BỘ LỌC ===========================================
@@ -820,13 +826,13 @@ function showFilter() {
             oninput="updateSliderValue(event)"
           />
           <span id="sliderValue"></span>
-          <input type="submit" value="Áp dụng" />
+          <button type="submit"><i class="fa-solid fa-check"></i></button>
         </div>
       </form>
     </div>
 
     <div
-      class="filter-box filter-hTol"
+      class="filter-box filter-hTol sort"
       id="dec"
       onclick="sortProductsByPrice(this)"
     >
@@ -835,13 +841,14 @@ function showFilter() {
     </div>
 
     <div
-      class="filter-box filter-lToh"
+      class="filter-box filter-lToh sort"
       id="inc"
       onclick="sortProductsByPrice(this)"
     >
       <i class="fa-solid fa-arrow-up-wide-short"></i>
       <span class="text-filter">Giá tăng dần</span>
     </div>
+    
   `;
 }
 
@@ -932,7 +939,6 @@ function getRomValue() {
 }
 
 function getScreenValue() {
-  // Tìm phần tử có class '.active' trong các thẻ <span> chứa kích thước màn hình
   const activeSpan = document.querySelector(".screen .value-select .active");
 
   // Kiểm tra nếu không có phần tử nào được chọn
@@ -949,7 +955,7 @@ function getScreenValue() {
   const sizeValues = content.match(/(\d+(\.\d+)?)/g).map(Number); // Lấy tất cả số trong chuỗi
 
   if (content.includes("Bé hơn")) sizeValues.unshift(0);
-  if (content.includes("Lớn hơn")) sizeValues.push(0);
+  if (content.includes("Lớn hơn")) sizeValues.push(100);
 
   return sizeValues; // Chuyển đổi các giá trị thành số
 }
@@ -1049,24 +1055,6 @@ window.addEventListener("popstate", function (event) {
 });
 
 // ===================== HÀM TẠO PHÂN TRANG ================================
-// function productPagination(brand, page) {
-//   const totalProduct = productsByBrand.length;
-//   const totalPage = Math.ceil(totalProduct / productPerPage); // Tổng số trang
-
-//   let paginationHTML = "";
-//   for (let i = 1; i <= totalPage; i++) {
-//     const isActive = i === currentPage;
-//     paginationHTML += `
-//       <button class="btn-page ${
-//         isActive ? "active" : ""
-//       }" onclick="displayProductPerPage(${i})">
-//         ${i}
-//       </button>
-//     `;
-//   }
-//   document.getElementById("pagination").innerHTML = paginationHTML;
-// }
-
 function productPagination(page) {
   const totalProduct = productsByBrand.length;
   const totalPage = Math.ceil(totalProduct / productPerPage); // Tổng số trang
@@ -1106,7 +1094,7 @@ function productPagination(page) {
       </button>
     `;
   }
-  console.log("số trang: ", paginationHTML);
+  // console.log("số trang: ", paginationHTML);
 
   document.getElementById("pagination").innerHTML = paginationHTML;
 }
@@ -1132,17 +1120,7 @@ function display(list) {
                 ${product.storage ? `<span>${product.storage}</span>` : ""}
               </div>
               <div class="promotion line-clamp">${product.promotion}</div>
-              <div class="rating-favorite">
-                <div class="rating">
-                  ${createRatingStars(product.rating)}
-                </div>
-                <div class="favorite">
-                  <span>Yêu thích</span>
-                  <i class="fa-${
-                    product.isFavorite ? "solid" : "regular"
-                  } fa-heart" id="heart-icon"></i>
-                </div>
-              </div>
+              
             </div>
           </div>
         </a>
@@ -1180,12 +1158,12 @@ function filterAboutPrice(event) {
 
   console.log("filtered: ", filteredProducts);
 
-  if (filteredProducts.length === 0) {
-    alert("Không có sản phẩm nào trong khoảng giá này.");
-    productsByBrand = []; // Nếu không có sản phẩm nào, gán danh sách sản phẩm là rỗng
-  } else {
-    productsByBrand = filteredProducts; // Cập nhật danh sách sản phẩm đã lọc
-  }
+  // if (filteredProducts.length === 0) {
+  //   alert("Không có sản phẩm nào trong khoảng giá này.");
+  //   productsByBrand = []; // Nếu không có sản phẩm nào, gán danh sách sản phẩm là rỗng
+  // } else {
+  productsByBrand = filteredProducts; // Cập nhật danh sách sản phẩm đã lọc
+  // }
 
   currentPage = 1; // Đặt lại trang hiện tại về 1
   displayProductPerPage(currentPage); // Hiển thị sản phẩm đã lọc theo trang đầu
@@ -1198,54 +1176,18 @@ function updateSliderValue() {
   document.getElementById("sliderValue").textContent = slider.value;
 }
 
-// =========================== HÀM TÌM KIẾM THEO TÊN SẢN PHẨM =============================
-function searchProduct(event) {
-  if (event) {
-    event.preventDefault(); // Ngăn chặn hành vi mặc định nếu có event
-  }
-  let nameFind = document.getElementById("search-box").value;
-  if (found) nameFind = found;
+// thay đổi màu thanh kéo
+const rangeInput = document.getElementById("rangeSlider");
 
-  productsByBrand = [];
-  for (let element of listProducts) {
-    if (element.name.toLowerCase().includes(nameFind.toLowerCase())) {
-      productsByBrand.push(element);
-    }
-  }
+rangeInput.addEventListener("input", function () {
+  // Tính phần trăm giá trị đã kéo
+  const value = ((this.value - this.min) / (this.max - this.min)) * 100;
 
-  if (productsByBrand.length === 0) {
-    document.getElementsByClassName("product-display")[0].innerHTML = `
-      <div style="color: red; font-size: 20px; font-weight: 600; font-style: italic; text-align: center">
-        Danh sách trống
-      </div> `;
-  } else {
-    currentPage = 1;
-    displayProductPerPage(currentPage);
-  }
+  // Cập nhật màu nền của thanh kéo
+  this.style.background = `linear-gradient(to right, #ff8080 0%, #ff0000 ${value}%, #fff ${value}%, #fff 100%)`;
+});
 
-  // Cập nhật URL với nội dung tìm kiếm
-  const newUrl = `SanPham.html?find=${encodeURIComponent(nameFind)}`;
-  history.pushState(null, "", newUrl); // Thay đổi URL mà không làm mới trang
-}
-
-// =========================== HÀM HỘ TRỠ =============================
-// Hàm định dạng giá tiền
-function formatPrice(price) {
-  return price.toLocaleString("vi-VN", { style: "currency", currency: "VND" });
-}
-
-// Hàm tạo các ngôi sao đánh giá
-function createRatingStars(rating) {
-  let stars = "";
-  for (let i = 0; i < 5; i++) {
-    stars += `<i class="fa-solid fa-star${
-      i < rating ? "" : "-half-stroke"
-    }"></i>`;
-  }
-  return stars;
-}
-
-// xử lý input range
+// thay đổi giá trị hiện thị khi kéo
 const rangeSlider = document.getElementById("rangeSlider");
 const sliderValue = document.getElementById("sliderValue");
 
@@ -1278,4 +1220,68 @@ rangeSlider.addEventListener("mouseup", function () {
 // Xử lý ẩn giá trị khi người dùng rời chuột ngoài thanh trượt
 rangeSlider.addEventListener("mouseleave", function () {
   sliderValue.style.opacity = "0";
+});
+
+// =========================== HÀM TÌM KIẾM THEO TÊN SẢN PHẨM =============================
+function searchProduct(event) {
+  if (event) {
+    event.preventDefault(); // Ngăn chặn hành vi mặc định nếu có event
+  }
+  let nameFind = document.getElementById("search-box").value;
+  if (found) nameFind = found;
+  found = "";
+
+  productsByBrand = [];
+  for (let element of listProducts) {
+    if (element.name.toLowerCase().includes(nameFind.toLowerCase())) {
+      productsByBrand.push(element);
+    }
+  }
+
+  // if (productsByBrand.length === 0) {
+  //   document.getElementsByClassName("product-display")[0].innerHTML = `
+  //     <div style="color: red; font-size: 20px; font-weight: 600; font-style: italic; text-align: center">
+  //       Danh sách trống
+  //     </div> `;
+  // } else {
+  currentPage = 1;
+  displayProductPerPage(currentPage);
+  // }
+
+  // Cập nhật URL với nội dung tìm kiếm
+  const newUrl = `SanPham.html?find=${encodeURIComponent(nameFind)}`;
+  history.pushState(null, "", newUrl); // Thay đổi URL mà không làm mới trang
+}
+
+// Hàm định dạng giá tiền
+function formatPrice(price) {
+  return price.toLocaleString("vi-VN", { style: "currency", currency: "VND" });
+}
+
+// link qua trang sản phẩm nếu bấm vào giỏ hàng
+document.getElementById("cart-poiter").addEventListener("click", function () {
+  window.location.href = "Nhom55.html";
+});
+
+// Hiển thị nút khi cuộn xuống
+window.onscroll = function () {
+  const scrollToTopBtn = document.getElementById("scrollToTop");
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+};
+
+// Hàm cuộn lên đầu trang
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// link qua lịch sử mua hàng
+document.getElementById("historybutton").addEventListener("click", function () {
+  window.location.href = `HistoryCart.html`;
 });

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tài Khoản Của Bạn</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./asset/css/home.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header py-3">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img
+              src="./asset/img/logo.jpg"
+              alt="Logo"
+              class="me-2"
+              style="height: 80px; width: 200px"
+            />
+          </a>
+
+          <!-- Thanh tìm kiếm -->
+          <form class="d-flex mx-auto w-50" onsubmit="searchProduct(event)">
+            <div class="search-box">
+              <input
+                class="form-control me-2"
+                type="search"
+                id="search-box"
+                placeholder="Bạn cần tìm gì?"
+                aria-label="Tìm kiếm"
+                autocomplete="off"
+              />
+              <button class="btn btn-light" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+
+          <div class="d-flex align-items-center">
+            <a href="SanPham.html?brand=null&page=1">
+              <button class="btn btn-outline-light me-2">
+                <i class="bi bi-card-list"></i> <span>Sản phẩm</span>
+              </button>
+            </a>
+            <button class="btn btn-outline-light me-2" id="historybutton">
+              <i class="bi bi-clock-history"></i> <span>Lịch sử mua hàng</span>
+            </button>
+            <button class="btn btn-outline-light me-2" id="cart-poiter">
+              <i class="bi bi-cart"></i> <span>Giỏ hàng</span>
+            </button>
+            <button
+              id="userBtn"
+              class="btn btn-outline-light"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              <i class="bi bi-person"></i> <span>User</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Nội dung tài khoản -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Thông Tin Tài Khoản</h2>
+      <div id="account-info" class="p-4 bg-light rounded shadow-sm">
+        <p><strong>Tên người dùng:</strong> <span id="username"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p>
+          <strong>Tổng tiền giao dịch:</strong> <span id="tongTien">0₫</span>
+        </p>
+        <p>
+          <strong>Loại khách hàng:</strong> <span id="loaiKhachHang"></span>
+        </p>
+        <p><strong>Ngày tạo tài khoản:</strong> <span id="ngayTao"></span></p>
+        <p><strong>Trạng thái:</strong> <span id="status"></span></p>
+        <button class="btn btn-danger mt-3" onclick="signOut();">
+          Đăng xuất
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Thông Tin Cửa Hàng</h3>
+          <p>Cửa Hàng GROUP 55</p>
+          <p>273 Đ. An Dương Vương, P. 03, Q. 05, Tp. Hồ Chí Minh</p>
+          <p>Hotline: 0912.345.678</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Chính Sách</h3>
+          <ul>
+            <li>Quy chế hoạt động</li>
+            <li>Chính sách Bảo hành</li>
+            <li>Liên hệ hợp tác kinh doanh</li>
+            <li>Đơn Doanh nghiệp</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Bảo Hành</h3>
+          <ul>
+            <li>Tra thông tin bảo hành</li>
+            <li>Trung tâm bảo hành chính hãng</li>
+            <li>Quy định về việc sao lưu dữ liệu</li>
+            <li>Dịch vụ bảo hành điện thoại</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Hotline</h3>
+          <ul>
+            <li>Gọi mua hàng: 0912.345.678</li>
+            <li>Gọi khiếu nại: 0923.456.789</li>
+            <li>Gọi bảo hành: 0934.567.891</li>
+            <li>(08:00 - 22:00)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 | Copyright by <span>GROUP 55</span></p>
+      </div>
+
+      <button id="scrollToTop">&#8679;</button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      function loadUserInfo() {
+        let currentuser = JSON.parse(localStorage.getItem("currentUser"));
+        let bills = JSON.parse(localStorage.getItem("bills"));
+        let constUser = 0; // Khởi tạo kiểu số
+        console.log(bills);
+        console.log(typeof constUser); // Kiểm tra kiểu dữ liệu của constUser
+        console.log(constUser);
+
+        if (bills !== null && currentuser) {
+          bills.forEach((billTemp) => {
+            console.log(typeof billTemp); // Kiểm tra kiểu dữ liệu của billTemp
+            console.log(typeof billTemp.totalAmount); // Kiểm tra kiểu dữ liệu của totalAmount
+
+            if (billTemp.userName === currentuser.userName) {
+              // Loại bỏ ký tự đặc biệt và chuyển đổi thành số
+              const cleanedAmount = billTemp.totalAmount.replace(/\D/g, ""); // Loại bỏ các ký tự không phải số, dấu `-` hoặc dấu `.`
+              const amount = parseInt(cleanedAmount); // Chuyển thành số thực
+
+              if (!isNaN(amount)) {
+                // Đảm bảo giá trị hợp lệ
+                constUser += amount;
+              } else {
+                console.warn(
+                  `Invalid totalAmount after cleaning: ${billTemp.totalAmount}`
+                );
+              }
+            }
+          });
+        }
+        console.log(typeof constUser);
+        console.log(constUser);
+        console.log("thông tin tk hiện tại: ", currentuser);
+        if (currentuser) {
+          document.querySelector(".container #username").textContent =
+            currentuser.userName;
+          document.querySelector(".container #email").textContent =
+            currentuser.email;
+          document.querySelector(".container #tongTien").textContent =
+            constUser.toLocaleString("vi-VN", {
+              style: "currency",
+              currency: "VND",
+            });
+          document.querySelector(".container #loaiKhachHang").textContent =
+            currentuser.loaiKhachHang;
+          document.querySelector(".container #ngayTao").textContent =
+            currentuser.ngayTao;
+          document.querySelector(".container #status").textContent =
+            currentuser.status;
+        }
+      }
+      loadUserInfo();
+
+      function signOut() {
+        localStorage.removeItem("currentUser");
+        alert("Đăng xuất thành công!");
+        location.reload();
+        // let loginStatus = localStorage.getItem("loginStatus");
+        localStorage.setItem("loginStatus", false);
+        window.location.href = "index.html"; // Chuyển về trang đăng nhập sau khi đăng xuất
+      }
+
+      function searchProduct(event) {
+        event.preventDefault(); // Ngăn form reload trang
+        const searchBox = document.getElementById("search-box");
+        const query = searchBox.value.trim(); // Lấy giá trị từ ô tìm kiếm
+        if (query) {
+          // Điều hướng sang trang SanPham.html với từ khóa tìm kiếm
+          window.location.href = `SanPham.html?search=${encodeURIComponent(
+            query
+          )}`;
+        }
+      }
+
+      document
+        .getElementById("historybutton")
+        .addEventListener("click", function () {
+          window.location.href = `HistoryCart.html`;
+        });
+
+      document
+        .getElementById("cart-poiter")
+        .addEventListener("click", function () {
+          window.location.href = "Nhom55.html";
+        });
+
+      // thêm 2/12/2024: file account.html
+      let loginStatus =
+        JSON.parse(localStorage.getItem("loginStatus")) || false;
+      if (loginStatus) {
+        // Lấy thông tin người dùng hiện tại từ localStorage
+        let currentuser = JSON.parse(localStorage.getItem("currentUser"));
+
+        // Kiểm tra xem currentuser có tồn tại và có thuộc tính userName không
+        if (currentuser && currentuser.userName) {
+          // Cập nhật nội dung của nút userBtn
+          const userBtn = document.getElementById("userBtn");
+          userBtn.innerHTML = `<i class="bi bi-person"></i><span>${currentuser.userName}</span>`;
+        }
+      }
+
+      let disLogOut = document.querySelector(".btn-danger");
+      console.log("11111111111 ", disLogOut);
+      if (loginStatus) {
+        disLogOut.style.display = "block";
+      } else {
+        disLogOut.style.display = "none";
+      }
+    </script>
+    <script src="./scroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

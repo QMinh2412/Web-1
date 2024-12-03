@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <title>Group 55 | Giỏ Hàng</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="asset/img/logo.jpg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header py-3">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="./index.html">
+            <img
+              src="./asset/img/logo.jpg"
+              alt="Logo"
+              class="me-2"
+            />
+          </a>
+
+          <!-- Thanh tìm kiếm -->
+          <form class="d-flex mx-auto w-50" onsubmit="searchProduct(event)">
+            <div class="search-box">
+              <input
+                class="form-control me-2"
+                id="search-box"
+                type="search"
+                placeholder="Bạn cần tìm gì?"
+                aria-label="Tìm kiếm"
+                autocomplete="off"
+              />
+              <button class="btn btn-light" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+
+          <div class="d-flex align-items-center">
+            <a href="SanPham.html?brand=null&page=1">
+              <button class="btn btn-outline-light me-2 catogory-product">
+                <i class="bi bi-card-list"></i> <span>Sản phẩm</span>
+              </button>
+            </a>
+          </div>
+            <button class="btn btn-outline-light me-2" id="historybutton">
+              <i class="bi bi-clock-history"></i> <span
+              >Lịch sử mua hàng</span
+               >
+            </button>
+            <button class="btn btn-outline-light me-2" id="cart-poiter">
+              <i class="bi bi-cart"></i> <span>Giỏ hàng</span>
+            </button>
+            <button id="userBtn"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal">
+              <a href="account.html"><i class="bi bi-person"></i> <span>User</span></a>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="customAlert" class="custom-alert">
+        <p id="alertMessage"></p>
+        <button id="closeAlert" class="close-alert">X</button>
+    </div>
+    <div class="super-cart-container" id="indexSuperCart">
+        <!-- -------------------------------------Head-------------------------------------->
+        <div class="cart-thead">
+            <div class="cart-header">
+                <div class="go-back">
+                    <a href="javascript:void(0);" onclick="history.back();" id="back-to-Cart">
+                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-5273d083="">
+                            <path d="M19 8.5L1 8.5M1 8.5L8 1M1 8.5L8 16" stroke="#121219" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-v-5273d083=""></path></svg><path d="M19 8.5L1 8.5M1 8.5L8 1M1 8.5L8 16" stroke="#121219" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-v-5273d083=""></path>
+                        </svg>
+                    </a>
+                    <p class="title" id="cart">Giỏ hàng của bạn</p> <p class="title" style="display: none;" id="info">Thông Tin</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ------------------------------------Container--------------------------- -->
+        <div class="cart-container">
+                <div class="nothing-in-cart" id="nothingCart">
+                    <img src="./asset/img/Cart-empty.webp" alt="">
+                    <span class="my-3">Giỏ hàng của bạn đang trống
+                        <br>
+                        Hãy chọn thêm sản phẩm để mua sắm nhé
+                    </span>
+                    <div class="stickyBottomBar">
+                      <button class="btn-action" id="nothing-back" href="javascript:void(0);" onclick="history.back()" >Quay về trang chủ</button>
+                  </div>
+                </div>
+                <div class="ListItemSuperCart" id ="ListItemSuperCart">
+                    <div class="header-action">
+                            <div class="select-product-action " id="__BVID__28">
+                                <input type="checkbox" id = "select-all" value="true" class="custom-control-input" for="__BVID__28">
+                            </div>
+                            <p class="mb-0">Chọn tất cả</p>
+                    </div>
+                    <div class="block-product-item-outer">
+                        
+                        <!-- -------------------------------------------------------------------------- -->
+                    </div>
+                    <div class="stickyBottomBar">
+                      <div class="temp-info">
+                          <div class="price-temp">
+                              <p>Tạm tính: <span id="temporary-total">0đ</span> </p>
+                          </div>
+                          <div class="SMember" >
+                              <p>Chưa bao gồm chiếc khấu SMember </p>
+                          </div>
+                      </div>
+                      <button class="btn-action" id="buy-now-button" disabled> Mua Ngay</button>
+                  </div>
+                </div>
+                <div class="block-info">
+                  <div class="nva"> 
+                      <div class="nav__item" id="infoTab"><span>1. Thông Tin</span></div>
+                      <div class="nav__item" id="paymentTab"><span>2. Thanh Toán</span></div>
+                  </div>
+                  <div class="view-list" id="product-list" style="display: block;">
+                      <div class="view-list-wrapper">
+                      </div>
+                      <div class="view-list-title">
+                        <button id="toggle-button">
+                            
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-angle-down"><path data-v-200e7211="" fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" class=""></path></svg></button>
+                      </div>
+                  </div>
+                  <div class="block-customer">
+                      <p>THÔNG TIN KHÁCH HÀNG</p>
+                      <div class="block-customer-wrapper">
+                          <div class="block-customer_main">
+                              <div class="customer-input__1">
+                                  <div class="customer-name">
+                                      <p>Nguyễn Tuấn Khanh</p>
+                                      <span class="level" style="color: rgb(231, 55, 183); border: 1px solid rgb(231, 55, 183);">
+                                          S-NULL
+                                      </span>
+                                  </div>
+                                  <p class="customer-phone" style=" color: #637381;font-size: 14px;">0339220541</p>
+                              </div>
+                              <div class="customer-input__2">
+                                  <div class="box-input">
+                                      <input type="email" id="emailInput" placeholder="   " maxlength="100" autocomplete="off" class="box-input__main" >
+                                      <label for="emailInput" class="email-label">Email</label>
+                                      <div class="box-input__line"></div>
+                                  </div>
+                                  <span >(*) Hóa đơn VAT sẽ được gửi qua email này</span>
+                              </div>
+                              <div class="block-customer__bottom" id="customerBottom" >
+                                  <div class="bottom__item">
+                                      <input type="checkbox" name="emailPromo" id="emailPromo">
+                                      <label for="emailPromo">Nhận email thông báo và ưu đãi từ Group55</label>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="block-payment">
+                
+                      <p>THÔNG TIN NHẬN HÀNG</p>
+                      <div class="block-payment_main">
+                          <p style="font-size: 25px;font-weight: bold;color: red; padding-top: 10px; text-align: center;">Giao hàng tận nơi</p>
+                          <div class="payment-main_shipping">
+                              <div class="customer-receiver">
+                                  <div class="box-input">
+                                      <input type="text" id="nameInput" placeholder="   " maxlength="1000" autocomplete="off" class="box-input__main">
+                                      <label for="nameInput" class="email-label">Tên người nhận</label>
+                                      <div class="box-input__line"></div>
+                                  </div>
+                                  
+                                  <div class="box-input">
+                                      <input type="text" id="phoneInput" placeholder="" maxlength="10" autocomplete="off" class="box-input__main">
+                                      <label for="phoneInput" class="email-label">Số điện thoại người nhận</label>
+                                      <div class="box-input__line"></div>
+                                  </div>
+                                  
+                                  <!-- <div class="box-input">
+                                      <input type="text" id="nameInput" placeholder="Họ tên người nhận" maxlength="1000" autocomplete="off" class="box-input__main">
+                                      <label for="nameInput" class="name-label">TÊN NGƯỜI NHẬN</label>
+                                      <div class="box-input__line"></div>
+                                  </div>
+                                  <div class="box-input">
+                                      <input type="text" id="nameInput" placeholder="Số điện thoại người nhận" maxlength="10" autocomplete="off" class="box-input__main">
+                                      <label for="nameInput" class="name-label">SDT Người Nhận</label>
+                                      <div class="box-input__line"></div>
+                                  </div> -->
+                              </div>
+                              <div class="box-wrapper">
+                                <div class="box-select"> 
+                                      <div class="box-input box-input--hasvalue">
+                                          <input type="search" id="box-select-city" placeholder="Hồ Chí Minh" autocomplete="off" class="box-input__main" value="Hồ Chí Minh" readonly>
+                                          <label for="box-select-city" class="email-label" >Tỉnh / Thành phố</label> 
+                                          <div  class="box-input__line"></div> 
+                                  </div>
+                                  <div class="box-input"> 
+                                        <input type="search" id="box-select-district" placeholder="" autocomplete="off" class="box-input__main">
+                                        <label for="box-select-district"  class="email-label" >Quận / huyện</label>
+                                        <div  class="box-input__line"></div> 
+                                        <div  class="box-input__arrow"> 
+                                              <svg  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                                  <path  d="M8.00004 10.6668C7.84427 10.6671 7.69331 10.6128 7.57337 10.5135L3.57337 7.18012C3.28986 6.94448 3.25106 6.52362 3.4867 6.24012C3.72234 5.95661 4.1432 5.91781 4.4267 6.15345L8.00004 9.14012L11.5734 6.26012C11.7111 6.14827 11.8877 6.09594 12.0642 6.11471C12.2406 6.13348 12.4023 6.2218 12.5134 6.36012C12.6368 6.49869 12.6969 6.68244 12.6792 6.86716C12.6614 7.05188 12.5675 7.22086 12.42 7.33345L8.42004 10.5535C8.29665 10.6371 8.14877 10.677 8.00004 10.6668Z" fill="#717171">
+                                                  </path>
+                                              </svg>
+                                        </div>
+                                        <div id="districtDropdown" class="dropdown"> 
+                                          <!--  -->
+                                          <!--  -->
+                                          <!--  -->
+                                        </div>
+                                  </div>
+                                </div>
+                                <div class="box-select">
+                                  <div class="box-input">
+                                    <input id="box-select-ward" type="search" placeholder="" autocomplete="off" class="box-input__main">
+                                    <label for="box-select-ward" class="email-label">Chọn phường / xã</label>
+                                    <div class="box-input__line"></div>
+                                    <div  class="box-input__arrow"> 
+                                      <svg  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                          <path  d="M8.00004 10.6668C7.84427 10.6671 7.69331 10.6128 7.57337 10.5135L3.57337 7.18012C3.28986 6.94448 3.25106 6.52362 3.4867 6.24012C3.72234 5.95661 4.1432 5.91781 4.4267 6.15345L8.00004 9.14012L11.5734 6.26012C11.7111 6.14827 11.8877 6.09594 12.0642 6.11471C12.2406 6.13348 12.4023 6.2218 12.5134 6.36012C12.6368 6.49869 12.6969 6.68244 12.6792 6.86716C12.6614 7.05188 12.5675 7.22086 12.42 7.33345L8.42004 10.5535C8.29665 10.6371 8.14877 10.677 8.00004 10.6668Z" fill="#717171">
+                                          </path>
+                                      </svg>
+                                    </div>
+                                      <div id="wardDropdown" class="dropdown"> 
+                                        <!--  -->
+                                        <!--  -->
+                                        <!--  -->
+                                      </div>
+                                  </div>
+                                  <div class="box-input">
+                                    <input id="box-select-address" type="text" placeholder="" maxlength="1000" autocomplete="off" class="box-input__main">
+                                    <label for="box-select-address"class="email-label" >Địa chỉ</label>
+                                    <div class="box-input__line"></div>
+                                  </div>
+                                </div>
+                                <div class="box-input">
+                                  <input id="box-input-note"type="text" placeholder="" maxlength="255" autocomplete="off" class="box-input__main" >
+                                  <label for="box-input-note" class="email-label">Ghi chú khác (nếu có)</label>
+                                  <div class="box-input__line"></div>
+                                </div>
+                          </div>
+                          <div class="box-note"></div>
+                      </div>
+                  </div>
+                  <div class="block-payment_tips">
+                    <span>  <strong>Mẹo</strong> : Bạn có thể cài đặt Sổ địa chỉ tại <strong >Group55member</strong> để đặt hàng nhanh hơn.
+                    </span>
+                  </div>
+                  </div>
+                  <div class ="info-payment"> 
+                    <div class="info-quote">
+                        <div class="info-quote_block">
+                            <div class="quote-block_item">
+                                <p class="quote-block_title">Số lượng sản phẩm </p>
+                                <p class="quote-block_value">8</p>
+                            </div>
+                            <div class="quote-block_item">
+                                <p class="quote-block_title">Tiền hàng (tạm tính) </p>
+                                <p class="quote-block_value">190000000</p>
+                            </div>
+                            <div class="quote-block_item">
+                                <p class="quote-block_title">Phí vận chuyển </p>
+                                <p class="quote-block_value">Miễn phí</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-quote_bottom">
+                        <div class="quote-bottom_title">
+                            <p>Tổng tiền</p>
+                            <span>(đã gồm thuế VAT)</span>
+                        </div>
+                        <div class="quote-bottom_value">1900000</div>
+                    </div>
+                  </div>
+                  <div class="payment-quote">
+                    <p>THÔNG TIN THANH TOÁN</p>
+                    <div class="payment-quote__main">
+                        <div class="payment-main__img">
+                            <image src="/asset/img/Payment.png" width="100%" height="100%" alt=""></image>
+                        </div>
+                            <div class="payment-main__title">
+                            <p> Chọn phương thức thanh toán</p>
+                            <span>Giảm thêm tới 1.000.000đ</span>
+                        </div>
+                    </div>
+                    <div class="payment-quote__modal">
+                        <div class="payment-overlay"></div>
+                        <div class="payment-modal">
+                        <div class="payment-modal_head">
+                            <p>Chọn phương thức thanh toán</p>
+                            <em id="pament-modal-head_exit"><svg data-v-05e59da4="" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-05e59da4="" d="M5 19L19 5" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path data-v-05e59da4="" d="M19 19L5 5" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></em>
+                        </div>
+                        <div class="payment-modal_body">
+                            <div class="payment-modal_body-main">
+                                <div class="list-payment">
+                                  <p>Khả dụng</p>
+                                  <div data-v-05e59da4="" class="list-payment__item"><div data-v-05e59da4="" class="payment-item__img"><img data-v-05e59da4="" src="asset/img/COD.webp" alt="payment method"></div> <div data-v-05e59da4="" class="payment-item__title"><p data-v-05e59da4="">Thanh toán khi nhận hàng</p> <!----> <!----> <!----></div> <!----> <div data-v-05e59da4="" class="payment-item__tick"><svg data-v-05e59da4="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-05e59da4="" d="M11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11C8.76142 11 11 8.76142 11 6Z" fill="#D70018" stroke="#D70018" stroke-width="1.5"></path> <path data-v-05e59da4="" d="M3.75 5.75L4.70603 6.8426C5.11852 7.31402 5.85792 7.29447 6.24492 6.80192L8.25 4.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+                                  <div data-v-05e59da4="" class="list-payment__item list-payment__item"><div data-v-05e59da4="" class="payment-item__img"><img data-v-05e59da4="" src="asset/img/vnpay.webp" alt="payment method"></div> <div data-v-05e59da4="" class="payment-item__title"><p data-v-05e59da4="">VNPAY</p> <!----> <!----> <!----></div> <!----> <div data-v-05e59da4="" class="payment-item__tick"><svg data-v-05e59da4="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-05e59da4="" d="M11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11C8.76142 11 11 8.76142 11 6Z" fill="#D70018" stroke="#D70018" stroke-width="1.5"></path> <path data-v-05e59da4="" d="M3.75 5.75L4.70603 6.8426C5.11852 7.31402 5.85792 7.29447 6.24492 6.80192L8.25 4.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+                                  <div data-v-05e59da4="" class="list-payment__item list-payment__item"><div data-v-05e59da4="" class="payment-item__img"><img data-v-05e59da4="" src="asset/img/onepay.webp" alt="payment method"></div> <div data-v-05e59da4="" class="payment-item__title"><p data-v-05e59da4="">Qua thẻ Visa/Master/JCB/Napas</p> <!----> <!----> <!----></div> <!----> <div data-v-05e59da4="" class="payment-item__tick"><svg data-v-05e59da4="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-05e59da4="" d="M11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11C8.76142 11 11 8.76142 11 6Z" fill="#D70018" stroke="#D70018" stroke-width="1.5"></path> <path data-v-05e59da4="" d="M3.75 5.75L4.70603 6.8426C5.11852 7.31402 5.85792 7.29447 6.24492 6.80192L8.25 4.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+                                  <p>Không khả dụng</p>
+                                  <div data-v-05e59da4="" class="list-payment__item list-payment__item--disable"><div data-v-05e59da4="" class="payment-item__img"><img data-v-05e59da4="" src="/asset/img/kredivo.webp" alt="payment method"></div> <div data-v-05e59da4="" class="payment-item__title"><p data-v-05e59da4="">Kredivo</p> <!----> <!----> <span data-v-05e59da4="">
+                                      Nhập ưu đãi tại cổng, giảm thêm
+                                      10% tối đa 1.000.000đ
+                                  </span></div> <div data-v-05e59da4="" class="payment-item__arrow"><svg data-v-05e59da4="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-05e59da4="" d="M12.4994 10.0186C12.4998 10.2133 12.432 10.402 12.3078 10.5519L8.1411 15.5519C7.84655 15.9063 7.32048 15.9548 6.9661 15.6602C6.61172 15.3657 6.56322 14.8396 6.85777 14.4852L10.5911 10.0186L6.9911 5.5519C6.85129 5.37974 6.78588 5.15895 6.80934 4.93842C6.8328 4.71788 6.9432 4.5158 7.1161 4.3769C7.28932 4.22263 7.519 4.14752 7.7499 4.16967C7.9808 4.19181 8.19203 4.30919 8.33277 4.49357L12.3578 9.49357C12.4624 9.64781 12.5122 9.83265 12.4994 10.0186Z" fill="black"></path></svg></div> <div data-v-05e59da4="" class="payment-item__tick"><svg data-v-05e59da4="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-05e59da4="" d="M11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11C8.76142 11 11 8.76142 11 6Z" fill="#D70018" stroke="#D70018" stroke-width="1.5"></path> <path data-v-05e59da4="" d="M3.75 5.75L4.70603 6.8426C5.11852 7.31402 5.85792 7.29447 6.24492 6.80192L8.25 4.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+                                  <div data-v-05e59da4="" class="list-payment__item list-payment__item--disable"><div data-v-05e59da4="" class="payment-item__img"><img data-v-05e59da4="" src="asset/img/QRCode.webp" alt="payment method"></div> <div data-v-05e59da4="" class="payment-item__title"><p data-v-05e59da4="">Chuyển khoản ngân hàng qua mã QR</p> <!----> <!----> <!----></div> <!----> <div data-v-05e59da4="" class="payment-item__tick"><svg data-v-05e59da4="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-05e59da4="" d="M11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11C8.76142 11 11 8.76142 11 6Z" fill="#D70018" stroke="#D70018" stroke-width="1.5"></path> <path data-v-05e59da4="" d="M3.75 5.75L4.70603 6.8426C5.11852 7.31402 5.85792 7.29447 6.24492 6.80192L8.25 4.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+                                  <div data-v-05e59da4="" class="list-payment__item list-payment__item--disable"><div data-v-05e59da4="" class="payment-item__img"><img data-v-05e59da4="" src="asset/img/shopeepay.webp" alt="payment method"></div> <div data-v-05e59da4="" class="payment-item__title"><p data-v-05e59da4="">ShopeePay</p> <!----> <!----> <!----></div> <!----> <div data-v-05e59da4="" class="payment-item__tick"><svg data-v-05e59da4="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-05e59da4="" d="M11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11C8.76142 11 11 8.76142 11 6Z" fill="#D70018" stroke="#D70018" stroke-width="1.5"></path> <path data-v-05e59da4="" d="M3.75 5.75L4.70603 6.8426C5.11852 7.31402 5.85792 7.29447 6.24492 6.80192L8.25 4.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+                                  <div data-v-05e59da4="" class="list-payment__item list-payment__item--disable"><div data-v-05e59da4="" class="payment-item__img"><img data-v-05e59da4="" src="/asset/img/applepay.webp" alt="payment method"></div> <div data-v-05e59da4="" class="payment-item__title"><p data-v-05e59da4="">Apple Pay</p> <span data-v-05e59da4="">
+                                      Vui lòng sử dụng
+                                      <strong data-v-05e59da4="">trình duyệt Safari</strong>
+                                      để sử dụng tính năng này
+                                  </span> <!----> <!----></div> <!----> <div data-v-05e59da4="" class="payment-item__tick"><svg data-v-05e59da4="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-05e59da4="" d="M11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11C8.76142 11 11 8.76142 11 6Z" fill="#D70018" stroke="#D70018" stroke-width="1.5"></path> <path data-v-05e59da4="" d="M3.75 5.75L4.70603 6.8426C5.11852 7.31402 5.85792 7.29447 6.24492 6.80192L8.25 4.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>    
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-modal_bottom">
+                            <button disabled="disabled" class="btn btn-danger">
+                                Xác nhận
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="address-quote">
+                        <p>THÔNG TIN NHẬN HÀNG</p>
+                        <div class="address-quote__main">
+                            <div class="address-quote__block">
+                                <div class="address-quote__item">
+                                    <p class="address-quote__title">Khách hàng</p>
+                                    <p class="address-quote__value"><span data-v-6ee77bf0="" data-v-51989a3a="" class="level" style="color: rgb(231, 55, 183); border: 1px solid rgb(231, 55, 183);">
+                                        S-NULL
+                                    </span> Tuấn Khanh Nguyễn</p>
+                                </div>
+                                <div class="address-quote__item">
+                                    <p class="address-quote__title">Số điện thoại</p>
+                                    <p class="address-quote__value">0339220541</p>
+                                </div>
+                                <div class="address-quote__item">
+                                    <p class="address-quote__title">Email</p>
+                                    <p class="address-quote__value">jdurisk@gmail.com</p>
+                                </div>
+                                <div class="address-quote__item">
+                                    <p class="address-quote__title">Nhận hàng tại</p>
+                                    <p class="address-quote__value">12 ba thang hai, Thị trấn Tân Túc, Huyện Bình Chánh, Hồ Chí Minh</p>
+                                </div>
+                                <div class="address-quote__item">
+                                    <p class="address-quote__title">Người nhận</p>
+                                    <p class="address-quote__value">Tuấn Khanh Nguyễn - 0339220541</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                  </div>
+                  <div class="check-policy">
+                    <input  type="checkbox" checked="checked">
+                    <div ><label >
+                        Bằng việc Đặt hàng, bạn đồng ý với
+                          Điều khoản sử dụng
+                        của Group55.
+                      </label> <br> <p ><em >
+                          Với các giao dịch <strong >từ 10 triệu trở lên</strong>, Group55 xin phép kiểm tra <strong >thẻ
+                          cứng</strong> và <strong >CCCD</strong> của <strong >đúng chủ thẻ</strong> trước khi tiến hành giao hàng
+                          nhằm hạn chế các trường hợp gian lận.
+                        </em></p></div>
+                  </div>
+              <div class="stickyBottomBar">
+                  <button class="btn-action" id="continue" >Tiếp tục</button>
+              </div>
+              <div class="bottom-bar_main " style="width: 100%;"><div  class="bottom-bar container mt-auto"><div class="total-box d-flex justify-content-between align-items-start"><p  class="title-temp">Tổng tiền tạm tính:</p> <div  class="price d-flex flex-column align-items-end"><span  class="total">162.130.000đ</span></div></div> <!----> <div  class="btn-submit mt-2"><button  class="button__go-next btn btn-danger d-flex flex-column justify-content-center align-items-center w-100" >
+                        Thanh toán
+                </button> <div id="viewListItemInQuote"><button id="viewListItemInQuote-btn" type="button" class="btn button__go-home btn d-flex justify-content-center align-items-center w-100 btn-secondary" >
+                Kiểm tra danh sách sản phẩm (9)
+                </button> <!----></div></div></div> <div  class="clear"></div></div>
+          </div>
+                
+        </div>
+    </div>
+    <button id="scrollToTopBtn" style="display:none;">Kéo lên đầu trang</button>
+    <script src="./asset/js/script.js"></script>
+    <script>
+        function searchProduct(event) {
+        event.preventDefault(); // Ngăn form reload trang
+        const searchBox = document.getElementById("search-box");
+        const query = searchBox.value.trim(); // Lấy giá trị từ ô tìm kiếm
+        if (query) {
+          // Điều hướng sang trang SanPham.html với từ khóa tìm kiếm
+          window.location.href = `SanPham.html?search=${encodeURIComponent(
+            query
+          )}`;
+        }
+      }
+      document.getElementById("historybutton").addEventListener("click", function () {
+          window.location.href = `HistoryCart.html`;
+        });
+    </script>
+
+</body>
+</html>
